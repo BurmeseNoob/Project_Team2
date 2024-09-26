@@ -1,5 +1,4 @@
 FROM openjdk:17
-
-COPY ./target/classes/ProjectTeam2 /tmp/ProjectTeam2
+COPY ./target/Project_Team2-1.0-SNAPSHOT-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java","ProjectTeam2.App"]
+ENTRYPOINT ["java","-jar","Project_Team2-1.0-SNAPSHOT-jar-with-dependencies.jar"]
