@@ -4,3 +4,7 @@
 # DevOps
 Develop Build Status
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/statusBurmeseNoob/Project_Team2/main.yml?branch=develop)
+
+
+Master build status ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/eau-dae-raie-A/Dev-Ops-Group-1-/main.yml?branch=master&style=flat-square)
+
