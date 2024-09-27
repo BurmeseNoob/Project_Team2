@@ -4,3 +4,10 @@
 
 Master build status ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/eau-dae-raie-A/Dev-Ops-Group-1-/main.yml?branch=master&style=flat-square)
 
+Team Two Members
+-  WaiYanPhoneMyint
+-  SwanHtetPyaeSone
+-  ToeAungLin
+-  AungYeKhant
+-  KaYin
+
