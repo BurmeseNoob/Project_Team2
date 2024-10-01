@@ -27,8 +27,8 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?allowPublicKeyRetrieval=True&useSSL=false", "root", "example");
-                System.out.println("Successfully connected");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=True&useSSL=false", "root", "example");
+                System.out.println("Word Sql Created Successfully and Connected");
                 // Wait a bit
                 Thread.sleep(10000);
                 // Exit for loop
