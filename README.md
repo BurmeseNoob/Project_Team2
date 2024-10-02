@@ -5,3 +5,4 @@
 
 - I have prepared for the course work for the world querying (1st Oct 2024: 10PM)
 - I(Swan Htet) separated the three Classes of City,Country and Language and i made the 2 methods in App about connection and disconnect.
+- I have made the Code Structuring about including packages,Classes and I also finished about FIRST querying tech (2nd October 2024: 3:41PM)
