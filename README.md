@@ -4,3 +4,4 @@
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/BurmeseNoob/Project_Team2/main.yml?branch=develop)
 
 - I have prepared for the course work for the world querying (1st Oct 2024: 10PM)
+- I(Swan Htet) separated the three Classes of City,Country and Language and i made the 2 methods in App about connection and disconnect.
