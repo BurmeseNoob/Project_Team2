@@ -1,62 +1,54 @@
 package ProjectTeam2;
+import Reports.CountryReports;
+import DataBaseConnect.Connection;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 public class App
 {
 
     public static void main(String[] args)
     {
-        try
-        {
-            // Load Database driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        }
-        catch (ClassNotFoundException e)
-        {
-            System.out.println("Could not load SQL driver");
-            System.exit(-1);
-        }
 
-        // Connection to the database
-        Connection con = null;
-        int retries = 100;
-        for (int i = 0; i < retries; ++i)
-        {
-            System.out.println("Connecting to database...");
-            try
-            {
-                // Wait a bit for db to start
-                Thread.sleep(30000);
-                // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?allowPublicKeyRetrieval=True&useSSL=false", "root", "example");
-                System.out.println("Word Sql Created Successfully and Connected");
-                // Wait a bit
-                Thread.sleep(10000);
-                // Exit for loop
-                break;
-            }
-            catch (SQLException sqle)
-            {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
-                System.out.println(sqle.getMessage());
-            }
-            catch (InterruptedException ie)
-            {
-                System.out.println("Thread interrupted? Should not happen.");
-            }
-        }
+        Connection ct = new Connection();
+        ct.connect();
 
-        if (con != null)
-        {
-            try
-            {
-                // Close connection
-                con.close();
-            }
-            catch (Exception e)
-            {
-                System.out.println("Error closing connection to database");
-            }
-        }
+        //Creating the CountyReport Object to get the Data for displaying the system.
+        CountryReports cr = new CountryReports(ct.getConnection());
+
+        //1# Query about retrieving  and displaying the data of the population of the Country according to the Descending Order
+        cr.displayingAboutDescendingPopulation();
+        System.out.println("");
+        //2# Report About the data of population of the Country order by descending according to Continent
+        cr.displayingAboutDescendingPopulationByContinent();
+        System.out.println("");
+        //3# Report About the data of population of the Country order by descending according to Region
+        cr.displayingAboutDescendingPopulationByRegion();
+        System.out.println("");
+        //4# Report about top populate country limit by user
+        int N = 10;
+        cr.displayTopPouplateCountrybyUser(N);
+        System.out.println("");
+
+        //5# Report about top populate country according to Continent limit by user
+        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
+        System.out.println("");
+
+        //6# Report about top populate country according to Region limit by user
+        cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
+        System.out.println("");
+
+
+        //7#
+
+        //8#
+
+        //9#
+
+        //10#
+
+        ct.disconnect();
+
     }
 }
