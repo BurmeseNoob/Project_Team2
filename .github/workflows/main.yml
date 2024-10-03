@@ -1,9 +1,9 @@
-name: A workflow for my Hello World App
+name: World Data Querying with JAVA/SQL
 on: push
 
 jobs:
   build:
-    name: Hello world action
+    name: Querying Action
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
