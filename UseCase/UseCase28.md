@@ -9,9 +9,6 @@ Gather and validate population data for a specific country, optionally including
 #### **Level**
 User-goal level for country-level strategy and planning.
 
-#### **Preconditions**
-- Access to reliable country population data.
-- Tools for data analysis.
 
 #### **Success End Condition**
 The report is generated and accepted.
@@ -39,4 +36,4 @@ Request from senior management for country population data.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

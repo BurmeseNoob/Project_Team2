@@ -10,9 +10,7 @@ Analyze population data for cities within a specific country, validate the data,
 User-goal level for national strategy and decision-making.
 
 #### **Preconditions**:
-- Access to reliable population data.
-- Tools for data analysis (e.g., Excel, SQL, Python).
-- Defined value of **N** and country of interest.
+- Defined value of **N** and country.
 
 #### **Success End Condition**:
 A report is generated with the top **N** cities and accepted by stakeholders.
@@ -42,4 +40,4 @@ Request from senior management or planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.4**

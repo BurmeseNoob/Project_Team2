@@ -1,4 +1,4 @@
-### USE CASE 10: **Produce Report on All Cities in a Country Organized by Population**
+### USE CASE 10: **Producing the report of the population of the City in a Country by Descending order**
 
 #### **Goal in Context**:
 Provide urban population data for a country to support national planning, infrastructure development, and resource allocation.
@@ -9,11 +9,6 @@ Collect and sort data for cities in a country, creating a ranked report.
 #### **Level**:
 High-level task contributing to national strategy.
 
-#### **Preconditions**:
-- Reliable, up-to-date population data.
-- Data analysis tools available.
-- Country of interest defined.
-
 #### **Success End Condition**:
 Report ranked by population is submitted and accepted.
 
@@ -21,7 +16,7 @@ Report ranked by population is submitted and accepted.
 Incomplete, inaccurate, or delayed report.
 
 #### **Primary Actor**:
-Data Analyst.
+Data Analyst / Developer
 
 #### **Trigger**:
 Request from management or planners to analyze city population data for a country.
@@ -35,11 +30,11 @@ Request from management or planners to analyze city population data for a countr
 6. Feedback is incorporated.
 
 #### **Extensions**:
-- **Data gaps**: Seek alternatives or notify stakeholders.
+- **Data gaps**: Seek alternatives or notify project manager.
 - **Inconsistent data**: Clarify with data providers.
 
 #### **SUB-VARIATIONS**:
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.3**

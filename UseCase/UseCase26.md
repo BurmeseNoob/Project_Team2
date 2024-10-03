@@ -9,9 +9,6 @@ Gather and analyze population data for a specific continent, optionally includin
 #### **Level**
 User-goal level for regional strategy and analysis.
 
-#### **Preconditions**
-- Access to reliable population data for the continent.
-- Tools for data analysis.
 
 #### **Success End Condition**
 A report on the continent’s population is generated and accepted.
@@ -39,4 +36,4 @@ Request from senior management for population data on the continent.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

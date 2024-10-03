@@ -10,8 +10,6 @@ Analyze population data for global capital cities, rank the top **N**, and gener
 User-goal level for global strategy and planning.
 
 #### **Preconditions**:
-- Access to global population data.
-- Tools for data analysis.
 - Defined value of **N**.
 
 #### **Success End Condition**:
@@ -42,4 +40,4 @@ Request from senior management or strategists.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.4**

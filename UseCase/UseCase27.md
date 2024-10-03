@@ -9,10 +9,6 @@ Gather and analyze population data for a specified region, optionally including 
 #### **Level**
 User-goal level for regional strategy and planning.
 
-#### **Preconditions**
-- Access to reliable population data for the region.
-- Tools for data analysis.
-
 #### **Success End Condition**
 A population report for the region is generated and accepted.
 
@@ -39,4 +35,4 @@ Request from senior management or planners for regional population data.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

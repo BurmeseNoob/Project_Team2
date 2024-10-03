@@ -1,19 +1,18 @@
-### **USE CASE 7: Produce Report on All Cities in the World Organized by Population**
+### **USE CASE 7: Producing the report of the population of the City by Descending order**
 
 - **Goal in Context**: Analyze global urbanization trends by ranking cities by population.
 - **Scope**: Gather and organize population data for all cities globally.
 - **Level**: High-level task supporting urbanization strategy.
-- **Preconditions**: Access to up-to-date global city population data and analysis tools.
-- **Success End Condition**: Report accepted by stakeholders.
+- **Success End Condition**: Report accepted by project manager.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
-- **Trigger**: Request for city population data to assess urbanization trends.
+- **Primary Actor**: Data Analyst / Developer
+- **Trigger**: Request for city population data.
 
 #### **MAIN SUCCESS SCENARIO**:
 1. Request initiated.
 2. Requirements clarified.
 3. Data sources accessed.
-4. Data extracted for cities globally.
+4. Data extracted for cities.
 5. Data validated and cleaned.
 6. Cities ranked by population size.
 7. Report generated with insights.
@@ -23,11 +22,11 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs stakeholders.
+- **Data unavailable**: Analyst finds alternative sources or informs project manager.
 - **Data inconsistencies**: Analyst cross-references the data.
 
 #### **SUB-VARIATIONS**:
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.3**

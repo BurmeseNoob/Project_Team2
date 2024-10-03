@@ -10,9 +10,7 @@ Analyze population data for all capital cities within a continent, rank them by 
 User-goal level for regional planning and strategy.
 
 #### **Preconditions**:
-- Access to continent-specific population data.
-- Tools for data analysis.
-- Clarification of additional data requirements (if any).
+- Clarification of additional data requirements.
 
 #### **Success End Condition**:
 A ranked report of all capital cities in the continent is generated and accepted.
@@ -42,4 +40,4 @@ Request from senior management or regional planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.4**

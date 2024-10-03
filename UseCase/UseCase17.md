@@ -10,9 +10,7 @@ Analyze population data for all capital cities worldwide, rank them by size, and
 User-goal level for global strategy and planning.
 
 #### **Preconditions**:
-- Access to global population data.
-- Tools for data analysis.
-- Clarification of additional data requirements (if any).
+- Clarification of additional data requirement.
 
 #### **Success End Condition**:
 A ranked report of all capital cities by population is generated and accepted.
@@ -42,4 +40,4 @@ Request from senior management or market researchers.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.4**

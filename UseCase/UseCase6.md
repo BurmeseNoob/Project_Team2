@@ -1,12 +1,11 @@
-### **USE CASE 6: Produce Report on Top N Populated Countries in a Region**
+### **USE CASE 6: Producing the Top N values of the population of the country in a Region by Descending order, N will be provided by user**
 
 - **Goal in Context**: Focus on the top **N** populated countries in a region to inform regional strategy.
 - **Scope**: Gather and organize population data for a specific region.
 - **Level**: High-level task supporting regional decision-making.
-- **Preconditions**: Access to up-to-date data for the region and tools for analysis.
-- **Success End Condition**: Report accepted by stakeholders.
+- **Success End Condition**: Report accepted by project manager.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
+- **Primary Actor**: Data Analyst / Developer
 - **Trigger**: Request for top **N** countries in a region.
 
 #### **MAIN SUCCESS SCENARIO**:
@@ -23,13 +22,13 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs stakeholders.
+- **Data unavailable**: Analyst finds alternative sources or informs project manager.
 - **Data inconsistencies**: Analyst cross-references the data.
 
 #### **SUB-VARIATIONS**:
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.3**
 
 

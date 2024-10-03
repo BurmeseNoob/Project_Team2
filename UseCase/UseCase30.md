@@ -9,9 +9,6 @@ Gather, validate, and generate a report on city population, optionally including
 ### Level:
 User-goal level (supports city planning, urban development).
 
-### Preconditions:
-- Reliable city population data.
-- Analytical tools (Excel, SQL, Python).
 
 ### Success End Condition:
 A complete, accurate report is generated and accepted by stakeholders.
@@ -42,4 +39,4 @@ A request for city population data from city authorities or planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**
