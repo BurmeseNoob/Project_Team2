@@ -48,3 +48,14 @@
 
 <br />
 <br />
+
+<div style="text-align: center;">
+  <h2>👨‍💻 Contributors</h2>
+  <ul style="list-style-type: none; padding: 0;">
+    <li>Aung Ye Khant - <strong>Project Leader</strong></li>
+    <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
+    <li>Wai Yan Phone Myint - <strong>Code Assistant</strong></li>
+    <li>Toe Aung Lynn - <strong>System Tester</strong></li>
+    <li>Saw Eh Blut Lel Bwe - <strong>Project Analyst</strong></li>
+  </ul>
+</div>
