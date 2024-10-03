@@ -46,12 +46,9 @@
   </ul>
 </div>
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-</p>
 
 <div style="text-align: center;">
-  <h2>👨‍💻 Contributors</h2>
+  <h2>👨‍💻 Team Members</h2>
   <ul style="list-style-type: none; padding: 0;">
     <li>Aung Ye Khant - <strong>Project Leader</strong></li>
     <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
@@ -62,11 +59,6 @@
 </div>
 
 
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-</p>
-
 <h2 style="text-align: center;">🖥️ Project Language</h2>
 
 <div style="text-align: center;">
@@ -74,3 +66,5 @@
   <img src="https://img.shields.io/badge/SQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker_Files-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
 </div>
+
+<div align="center" style="margin: auto;">
