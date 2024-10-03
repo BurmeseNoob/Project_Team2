@@ -29,3 +29,23 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 </p>
+
+<div style="text-align: center;">
+  <h2><span style="color: red;">📂</span> Key Features</h2>
+  <ul style="list-style-position: inside; display: inline-block; text-align: left;">
+    <li><span>🌍</span> Comprehensive Population Reports<br>
+      Generate detailed population reports for countries, continents, and regions.</li>
+    <li><span>🏙️</span> City and Capital Statistics<br>
+      Access population data for cities and capital cities.</li>
+    <li><span>📊</span> Customizable Rankings<br>
+      Create top-N population rankings based on user-specified input.</li>
+    <li><span>🗣️</span> Language-Based Data Reports<br>
+      View population breakdowns based on spoken languages.</li>
+    <li><span>⚙️</span> Continuous Integration and Automated Testing<br>
+      Seamlessly integrated with GitHub Actions for automated testing and deployment.</li>
+  </ul>
+</div>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</p>
