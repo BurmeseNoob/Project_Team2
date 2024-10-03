@@ -10,9 +10,7 @@ Analyze population data for capital cities within a specific region, rank them b
 User-goal level for regional strategy and decision-making.
 
 #### **Preconditions**:
-- Access to region-specific population data.
-- Tools for data analysis.
-- Clarification of additional data requirements (if any).
+- Clarification of additional data requirements.
 
 #### **Success End Condition**:
 A ranked report of capital cities in the region is generated and accepted.
@@ -42,4 +40,4 @@ Request from senior management or regional planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.4**

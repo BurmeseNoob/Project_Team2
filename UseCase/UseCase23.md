@@ -9,10 +9,6 @@ Gather and analyze population data by continent, focusing on urban and rural dis
 #### **Level**
 User-goal level for global urbanization analysis.
 
-#### **Preconditions**
-- Access to reliable data on urban and non-urban populations.
-- Tools for analysis.
-
 #### **Success End Condition**
 A report with insights into urbanization trends is generated and accepted.
 
@@ -41,4 +37,4 @@ Request from senior management or urban planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

@@ -9,9 +9,6 @@ Gather, validate, and generate a report on the number of Chinese speakers worldw
 ### Level:
 User-goal level (supports global planning and decision-making).
 
-### Preconditions:
-- Reliable data on Chinese speakers.
-- Analytical tools (Excel, SQL, Python).
 
 ### Success End Condition:
 A complete, accurate report on Chinese speakers is generated and accepted by stakeholders.
@@ -42,4 +39,4 @@ A request for data on Chinese speakers globally from senior management or strate
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

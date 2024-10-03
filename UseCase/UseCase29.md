@@ -9,9 +9,6 @@ Gather, validate, and generate a report on total district population, optionally
 ### Level:
 User-goal level (supports local planning and resource allocation).
 
-### Preconditions:
-- Access to reliable district population data.
-- Tools for data analysis (Excel, SQL, Python).
 
 ### Success End Condition:
 A complete, accurate report is generated and accepted by stakeholders.
@@ -42,4 +39,4 @@ A request for district population data from local authorities or planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

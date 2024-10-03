@@ -9,10 +9,6 @@ Gather and analyze data on total, urban, and rural populations for regions.
 #### **Level**
 User-goal level for regional urbanization analysis.
 
-#### **Preconditions**
-- Access to regional population data.
-- Tools for data analysis.
-
 #### **Success End Condition**
 A report on regional urbanization dynamics is generated and accepted.
 
@@ -39,4 +35,4 @@ Request from regional planners or senior management.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

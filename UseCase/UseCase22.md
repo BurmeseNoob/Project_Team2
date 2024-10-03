@@ -10,8 +10,7 @@ Extract, validate, and rank population data of capital cities within a specific 
 User-goal level; supports regional strategy and market research.
 
 #### **Preconditions**
-- Access to reliable, up-to-date population data.
-- Tools for data analysis (Excel, SQL, Python).
+- Tools for data analysis (sql).
 
 #### **Success End Condition**
 The report is generated and accepted by stakeholders.
@@ -41,4 +40,4 @@ Request from senior management or regional planners.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

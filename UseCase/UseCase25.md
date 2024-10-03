@@ -9,10 +9,6 @@ Compile the most recent global population data from trusted sources.
 #### **Level**
 User-goal level; supports access to global population statistics.
 
-#### **Preconditions**
-- Access to reliable global population data.
-- Data analysis tools.
-
 #### **Success End Condition**
 The report with the total global population is generated and accepted.
 
@@ -39,4 +35,4 @@ Request from senior management for quick access to global population data.
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

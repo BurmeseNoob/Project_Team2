@@ -12,8 +12,6 @@ Collect population data for non-capital cities in the specified region, rank the
 User-goal level (regional market analysis).
 
 #### **Preconditions**:
-- Access to population data for non-capital cities in the region.
-- Tools for data analysis.
 - User-defined **N**.
 
 #### **Success End Condition**:
@@ -52,4 +50,4 @@ A request from senior management for a report on top **N** non-capital cities in
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.5**

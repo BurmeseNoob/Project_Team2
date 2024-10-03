@@ -1,12 +1,11 @@
-### **USE CASE 4: Produce Report on Top N Populated Countries**
+### **USE CASE 4: Producing the Top N values of the population of the country by Descending order, N will be provided by user**
 
 - **Goal in Context**: Provide data on the top **N** most populated countries to support global decisions.
 - **Scope**: Data collection and sorting for the top **N** countries by population.
 - **Level**: High-level task supporting strategic decision-making.
-- **Preconditions**: Access to up-to-date global population data and tools.
 - **Success End Condition**: Report accepted by stakeholders.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
+- **Primary Actor**: Data Analyst/ Developer
 - **Trigger**: Request for top **N** populated countries.
 
 #### **MAIN SUCCESS SCENARIO**:
@@ -23,11 +22,11 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Alternative data sources found, or stakeholders informed.
+- **Data unavailable**: Alternative data sources found, or project manager informed.
 - **Data inconsistencies**: Analyst cross-references data sources.
 
 #### **SUB-VARIATIONS**:
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.3**

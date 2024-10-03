@@ -1,12 +1,12 @@
-### **USE CASE 3: Produce Population Report for Countries in a Region**
+### **USE CASE 2: Producing the report of the population of the countries in a region order by descending**
+
 
 - **Goal in Context**: Evaluate population data within a specific region for market/resource allocation.
 - **Scope**: Data collection and organization for countries in a region.
 - **Level**: High-level task supporting regional decisions.
-- **Preconditions**: Region's population data must be available and current.
-- **Success End Condition**: Report is complete and accepted by stakeholders.
+- **Success End Condition**: Report is complete and accepted by project manager.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
+- **Primary Actor**: Data Analyst/ Developer
 - **Trigger**: Request for regional population data.
 
 #### **MAIN SUCCESS SCENARIO**:
@@ -23,11 +23,11 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs stakeholders.
+- **Data unavailable**: Analyst finds alternative sources or informs project manager.
 - **Data inconsistencies**: Data cross-referenced with other sources.
 
 #### **SUB-VARIATIONS**:
 - **None**
 
 #### **SCHEDULE**:
-- **DUE DATE: Release 1.0**
+- **DUE DATE: Release 0.1.0.3**
