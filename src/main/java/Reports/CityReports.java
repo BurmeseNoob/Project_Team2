@@ -330,7 +330,7 @@ public class CityReports {
 
                 System.out.println("");
                 System.out.println("Population of cities order by descending according to City's District : " + district);
-                System.out.println("________________________________________________________________");
+                System.out.println("__________________________________________________________________________________________");
 
                 String cmd = "SELECT \n" +
                         "    city.Name AS CityName, \n" +
