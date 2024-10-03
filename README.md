@@ -4,6 +4,8 @@
 
 <h1 align="center">World Population Data Reporting System</h1>
 
+<h3 align="center">🗓️ Project Timeline ( September 23, 2024 - October 21, 2024 )</h3>
+
 <p style="text-align: center;">
     This project is part of the SET09623 DevOps module, focused on creating a system that provides detailed population reports for an organization. The project follows Scrum methodologies, utilizes an SQL database for data management, and integrates continuous testing and deployment through GitHub Actions.
 </p>
@@ -46,6 +48,9 @@
   </ul>
 </div>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</p>
 
 <div style="text-align: center;">
   <h2>👨‍💻 Team Members</h2>
@@ -58,6 +63,9 @@
   </ul>
 </div>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</p>
 
 <h2 style="text-align: center;">🖥️ Project Language</h2>
 
@@ -68,3 +76,8 @@
 </div>
 
 <div align="center" style="margin: auto;">
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+</p>
+
