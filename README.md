@@ -81,3 +81,19 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 </p>
 
+
+<div align="center" style="margin: auto;">
+
+## 🗓️ Project Timeline
+
+| Phase              | Start Date  | End Date    | Status         |
+| ------------------ | ----------- | ----------- | -------------- |
+| Project Initiation | Sep 1, 2024 | Sep 10, 2024| ✅ Completed    |
+| Requirements Gathering | Sep 11, 2024 | Sep 20, 2024 | ✅ Completed |
+| Development        | Sep 21, 2024 | Oct 10, 2024| 🔄 In Progress |
+| Testing            | Oct 11, 2024 | Oct 20, 2024| ⏳ Pending      |
+| Deployment         | Oct 21, 2024 | Oct 23, 2024| ⏳ Pending      |
+
+</div>
+
+
