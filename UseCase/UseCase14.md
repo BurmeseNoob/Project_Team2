@@ -10,8 +10,6 @@ Gather data on the cities in a region, identifying and ranking the top **N** pop
 High-level task contributing to regional strategy and decision-making.
 
 #### **Preconditions**:
-- Reliable, up-to-date population data.
-- Tools for data analysis available.
 - **N** and region defined by the user.
 
 #### **Success End Condition**:
@@ -38,9 +36,8 @@ Request from management or planners to analyze top cities in a region.
 - **Unavailable data**: Seek alternatives or notify stakeholders.
 - **Inconsistent data**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Multiple regions**: Generate reports for multiple regions.
-- **Additional metrics**: Include requested metrics like population density.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-5-7 days.
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.4**

@@ -10,9 +10,7 @@ Collect and sort data for cities in the specified continent, producing a ranked 
 High-level task contributing to regional strategy.
 
 #### **Preconditions**:
-- Reliable, up-to-date population data.
-- Tools for data analysis available.
-- **N** (e.g., top 10, top 20) and continent specified by the user.
+- **N** (e.g., top 10, top 20) and a continent.
 
 #### **Success End Condition**:
 A report listing the top **N** cities by population is submitted and accepted.
@@ -38,9 +36,8 @@ Request from management or planners to analyze the largest cities in a continent
 - **Unavailable data**: Seek alternatives or notify stakeholders.
 - **Inconsistent data**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Multiple continents**: Generate reports for multiple continents.
-- **Additional metrics**: Include requested metrics like urban density.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-5-7 days.
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.4**

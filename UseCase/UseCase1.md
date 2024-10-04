@@ -1,18 +1,17 @@
-#### **USE CASE 1: Produce Population Report for All Countries**
+#### **USE CASE 1: Producing the report about the population of the country in the world order by descending**
 
-- **Goal in Context**: Provide a report ranking all countries by population to support global market decisions.
+- **Goal in Context**: Provide a report about Populations of the country largest to smallest.
 - **Scope**: Data gathering, analysis, and presentation of global population data.
 - **Level**: High-level task supporting strategic decision-making.
-- **Preconditions**: Access to reliable, up-to-date population data and tools (Excel, SQL, Python).
-- **Success End Condition**: Report is accurate, timely, and accepted by stakeholders.
+- **Success End Condition**: Report is accurate, timely, and accepted by project manager.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
+- **Primary Actor**: Data Analyst / .
 - **Trigger**: Request from senior management for population data.
 
 #### **MAIN SUCCESS SCENARIO**:
 1. Request initiated.
 2. Requirements clarified.
-3. Data sources accessed.
+3. Data sources accessed (world db and tables).
 4. Data extracted.
 5. Data validated and cleaned.
 6. Data sorted by population.
@@ -23,17 +22,12 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Alternative sources are found, or stakeholders are informed of delays.
+- **Data unavailable**: Alternative sources are found, or project manager are informed of delays.
 - **Data inconsistencies**: Analyst contacts the provider or cross-references other sources.
 
 #### **SUB-VARIATIONS**:
-- **Country-specific focus**: Report includes additional country-specific insights.
-- **Regional focus**: Focus on specific regions rather than globally.
+- **None**
 
 #### **SCHEDULE**:
-- **Day 1-2**: Gather data and validate sources.
-- **Day 3-4**: Process and sort data, handle inconsistencies.
-- **Day 5**: Generate report.
-- **Day 6**: Submit report.
-- **Day 7**: Finalize after feedback.
+- **DUE DATE: Release 0.1.0.3**
 

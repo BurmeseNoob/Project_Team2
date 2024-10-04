@@ -1,29 +1,30 @@
 package ProjectTeam2;
 
 public class City {
-    String CountryCode,Language,IsOfficial;
-    Float Percentage;
+    String Name,CountryCode,District;
+    int Population;
 
-    public City(String CountryCode, String Language, String IsOfficial, Float Percentage) {
+    public City(String Name, String CountryCode, String District, int Population) {
+        this.Name = Name;
         this.CountryCode = CountryCode;
-        this.Language = Language;
-        this.IsOfficial = IsOfficial;
-        this.Percentage = Percentage;
+        this.District = District;
+        this.Population = Population;
+    }
+
+    public String getName() {
+        return Name;
     }
 
     public String getCountryCode() {
         return CountryCode;
     }
 
-    public String getLanguage() {
-        return Language;
+    public String getDistrict() {
+        return District;
     }
 
-    public String getIsOfficial() {
-        return IsOfficial;
+    public int getPopulation() {
+        return Population;
     }
 
-    public Float getPercentage() {
-        return Percentage;
-    }
 }

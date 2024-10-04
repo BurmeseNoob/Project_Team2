@@ -11,8 +11,7 @@ High-level task contributing to regional strategy.
 
 #### **Preconditions**:
 - Reliable, up-to-date population data.
-- Tools for data analysis (Excel, SQL, Python).
-- Defined region of interest.
+- Defined regions.
 
 #### **Success End Condition**:
 A ranked report on cities by population is submitted and accepted.
@@ -35,12 +34,11 @@ Request from management or planners to analyze city-level data for a region.
 6. Feedback is incorporated.
 
 #### **Extensions**:
-- **Incomplete data**: Search for alternative sources or notify stakeholders.
+- **Incomplete data**: Search for alternative sources or tell project manager.
 - **Inconsistencies**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Multiple regions**: Generate multiple reports.
-- **Additional metrics**: Include requested metrics like urban density.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-5-7 days.
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.3**

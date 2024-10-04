@@ -10,8 +10,6 @@ Analyze population data for cities within a district to produce a report on the 
 User-goal level for localized planning and governance.
 
 #### **Preconditions**:
-- Access to district-level population data.
-- Tools for data analysis.
 - Defined value of **N** and district of interest.
 
 #### **Success End Condition**:
@@ -38,12 +36,8 @@ Request from local government or planners.
 - Data for some cities is missing or outdated.
 - Inconsistencies found in data.
 
-#### **Sub-Variations**:
-- Request for multiple districts.
-- Additional metrics requested (e.g., economic activity).
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-- **Day 1**: Define **N** and district, gather data.
-- **Day 2-3**: Validate and sort data.
-- **Day 4**: Generate and review report.
-- **Day 5**: Incorporate feedback (if needed).
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.4**

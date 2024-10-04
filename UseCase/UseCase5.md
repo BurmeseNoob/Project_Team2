@@ -1,12 +1,11 @@
-### **USE CASE 5: Produce Report on Top N Populated Countries in a Continent**
+### **USE CASE 5: Producing the Top N values of the population of the country in a Continent by Descending order, N will be provided by user**
 
 - **Goal in Context**: Focus on the top **N** populated countries in a continent to inform regional strategy.
 - **Scope**: Gather and organize population data for the specified continent.
 - **Level**: High-level task supporting regional decision-making.
-- **Preconditions**: Access to up-to-date data for the continent and tools for analysis.
-- **Success End Condition**: Report accepted by stakeholders.
+- **Success End Condition**: Report accepted by project manager.
 - **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst.
+- **Primary Actor**: Data Analyst / Developer
 - **Trigger**: Request for top **N** countries in a continent.
 
 #### **MAIN SUCCESS SCENARIO**:
@@ -23,15 +22,11 @@
 11. Report finalized.
 
 #### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative data sources or informs stakeholders.
+- **Data unavailable**: Analyst finds alternative data sources or informs project manager.
 - **Data inconsistencies**: Analyst cross-references the data.
 
 #### **SUB-VARIATIONS**:
-- **Multiple continents**: Report covers multiple continents.
-- **Additional metrics**: Report includes other relevant metrics (e.g., GDP, population growth).
+- **None**
 
 #### **SCHEDULE**:
-- **Day 1**: Define **N** and gather data.
-- **Day 2**: Process and validate.
-- **Day 3-4**: Generate and submit report.
-- **Day 5**: Finalize report after feedback.
+- **DUE DATE: Release 0.1.0.3**

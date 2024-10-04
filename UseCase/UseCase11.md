@@ -1,18 +1,13 @@
-### USE CASE 11: **Produce Report on All Cities in a District Organized by Population**
+### USE CASE 11: **Producing the report of the population of the City in District by Descending order**
 
 #### **Goal in Context**:
-Assess localized population trends to support district-level planning, resource distribution, and governance.
+Assess population of the city trends to support district-level.
 
 #### **Scope**:
-Collect and rank data for cities/towns in a district by population.
+Collect and rank data for cities in a district by population.
 
 #### **Level**:
 High-level task contributing to district-level planning.
-
-#### **Preconditions**:
-- Reliable, up-to-date population data.
-- Data analysis tools available.
-- District of interest defined.
 
 #### **Success End Condition**:
 A ranked report by population is submitted and accepted.
@@ -21,7 +16,7 @@ A ranked report by population is submitted and accepted.
 Incomplete, inaccurate, or delayed report.
 
 #### **Primary Actor**:
-Data Analyst.
+Data Analyst / Developer
 
 #### **Trigger**:
 Request from local government or management to analyze population trends in a district.
@@ -35,12 +30,11 @@ Request from local government or management to analyze population trends in a di
 6. Feedback incorporated.
 
 #### **Extensions**:
-- **Missing data**: Seek alternatives or notify stakeholders.
+- **Missing data**: Seek alternatives or notify project manager.
 - **Inconsistent data**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Multiple districts**: Generate multiple reports.
-- **Additional metrics**: Include requested metrics like migration patterns.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-4-6 days.
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.3**

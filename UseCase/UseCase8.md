@@ -1,18 +1,13 @@
-### USE CASE 8: **Produce Report on All Cities in a Continent Organized by Population**
+### USE CASE 8: **Producing the report of the population of the City in a Continent by Descending order**
 
 #### **Goal in Context**:
-Analyze city-level data in a continent to inform decisions on urban development, resource allocation, and regional planning.
+Analyze city-level data in a continent to inform decisions
 
 #### **Scope**:
 Gather and sort population data for cities in a continent, presenting a report ranked by population size.
 
 #### **Level**:
 High-level user goal contributing to regional planning and strategy.
-
-#### **Preconditions**:
-- Access to reliable, current population data.
-- Data analysis tools available (Excel, SQL, Python, etc.).
-- Continent of interest must be defined.
 
 #### **Success End Condition**:
 A complete report, ranked by population, is submitted and accepted for decision-making.
@@ -21,7 +16,7 @@ A complete report, ranked by population, is submitted and accepted for decision-
 Incomplete, inaccurate, or delayed report, preventing analysis.
 
 #### **Primary Actor**:
-Data Analyst.
+Data Analyst / Developer
 
 #### **Trigger**:
 A request from management or planners to analyze city-level population data within a continent.
@@ -35,12 +30,11 @@ A request from management or planners to analyze city-level population data with
 6. Feedback is incorporated if needed.
 
 #### **Extensions**:
-- **Unavailable data**: Find alternative sources or notify stakeholders.
+- **Unavailable data**: Find alternative sources or notify project manager.
 - **Inconsistent data**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Multiple continents**: Generate multiple reports.
-- **Additional metrics**: Include requested metrics like population density.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-5-7 days.
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.3**

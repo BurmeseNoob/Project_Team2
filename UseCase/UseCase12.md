@@ -10,8 +10,6 @@ Gather global data to produce a ranked report of the top **N** populated cities 
 High-level task contributing to global strategy.
 
 #### **Preconditions**:
-- Reliable, up-to-date population data.
-- Tools for data analysis available.
 - User specifies **N** (e.g., top 10, top 50).
 
 #### **Success End Condition**:
@@ -38,10 +36,8 @@ Request from management to analyze the largest global cities.
 - **Unavailable data**: Seek alternatives or notify stakeholders.
 - **Inconsistent data**: Clarify with data providers.
 
-#### **Sub-Variations**:
-- **Regional breakdowns**: Deliver reports for specific continents or regions.
-- **Additional metrics**: Include requested metrics like GDP or area size.
+#### **SUB-VARIATIONS**:
+- **None**
 
-#### **Schedule**:
-4-5 days.
-
+#### **SCHEDULE**:
+- **DUE DATE: Release 0.1.0.4**

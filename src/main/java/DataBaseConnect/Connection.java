@@ -43,7 +43,7 @@ public class Connection {
         }
     }
 
-    // Getter method to retrieve the Connection
+    // to retrieve the Connection
     public java.sql.Connection getConnection() {
         return con;
     }
