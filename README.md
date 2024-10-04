@@ -82,7 +82,7 @@
 </p>
 
 
-
+<div align="center" >
 
 ## 🗓️ Project Timeline
 
@@ -94,6 +94,6 @@
 | Testing            | Oct 11, 2024 | Oct 20, 2024| ⏳ Pending      |
 | Deployment         | Oct 21, 2024 | Oct 23, 2024| ⏳ Pending      |
 
-
+</div>
 
 
