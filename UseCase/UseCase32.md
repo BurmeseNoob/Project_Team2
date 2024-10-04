@@ -1,7 +1,7 @@
 ## 32. **Generate Report on the Number of People Who Speak English, Hindi, Spanish, and Arabic**
 
 ### Goal in Context:
-Provide a global report on the number of speakers of English, Hindi, Spanish, and Arabic to support language demographics analysis and strategic planning.
+Provide a global report on the number of speakers language demographics analysis and strategic planning.
 
 ### Scope:
 Gather, validate, and generate a report on the number of speakers for each language, including their percentage of the global population.
