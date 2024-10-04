@@ -82,7 +82,7 @@
 </p>
 
 
-<div align="center" style="margin: auto;">
+<div align="center" >
 
 ## 🗓️ Project Timeline
 
