@@ -10,6 +10,7 @@ public class CountryReports {
 
     private Connection con;
 
+    // Connection from SQL
     public CountryReports(Connection con) {
         this.con = con;
     }
