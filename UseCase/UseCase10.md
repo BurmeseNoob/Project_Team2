@@ -2,7 +2,7 @@
 #### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-As a data analyst, I can organize cities in a country by population size to evaluate domestic urban population distribution.
+As a data analyst, I can organize cities in a country by population size to evaluate domestic country population distribution.
 
 #### **Scope**
 Organization
@@ -23,7 +23,7 @@ The system shows a “no result” message.
 Data Analyst
 
 #### **Trigger**
-The analyst wants to evaluate urban density in the country.
+The analyst wants to evaluate the population of the country.
 
 #### **MAIN SUCCESS SCENARIO**
 Data analysis request the report.
