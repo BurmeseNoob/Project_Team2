@@ -16,7 +16,7 @@ public class LanguagesReports {
         this.con = con;
     }
 
-    //method to display about the languages speaking largest numbers to smallest on world population
+    // 32 #method to display about the languages speaking largest numbers to smallest on world population
     public void displayWorldLanguagesSpeak() throws SQLException
     {
         try {

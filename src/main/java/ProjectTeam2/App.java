@@ -1,9 +1,6 @@
 package ProjectTeam2;
-import Reports.CityReports;
-import Reports.CountryReports;
+import Reports.*;
 import DataBaseConnect.Connection;
-import Reports.LanguagesReports;
-import Reports.PopulationReports;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,6 +18,9 @@ public class App
         CityReports cy = new CityReports(ct.getConnection());
         PopulationReports pr = new PopulationReports(ct.getConnection());
         LanguagesReports lr  = new LanguagesReports(ct.getConnection());
+        SpecificPopulationReports cpr = new SpecificPopulationReports(ct.getConnection());
+
+
 //
 //        //1# Query about retrieving  and displaying the data of the population of the Country according to the Descending Order
 //        cr.displayingAboutDescendingPopulation();
@@ -100,12 +100,20 @@ public class App
 
         //25#
 
-        pr.displayPopulationLevelInCountry();
+//        pr.displayPopulationLevelInCountry();
 
 
+//        cpr.displayWorldPopulation();
 
+//        cpr.displayContinentPopulation();
+//        cpr.displayRegionPopulation();
+//          cpr.displayCountryPopulation();
+//        cpr.displayDistrictPopulation();
+        cpr.displayCityPopulation();
         //   Languages Report
 //        lr.displayWorldLanguagesSpeak();
+
+
 
 
 
