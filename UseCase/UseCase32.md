@@ -1,42 +1,41 @@
-## 32. **Generate Report on the Number of People Who Speak English, Hindi, Spanish, and Arabic**
+#### **USE CASE 32: Displaying Population Trends over Time**
+#### **CHARACTERISTIC INFORMATION**
 
-### Goal in Context:
-Provide a global report on the number of speakers of English, Hindi, Spanish, and Arabic to support language demographics analysis and strategic planning.
+#### **Goal in Context**
+As a data analyst, I can view population trends over time for any area of interest (world, continent, region, country, district, or city) to analyze growth patterns.
 
-### Scope:
-Gather, validate, and generate a report on the number of speakers for each language, including their percentage of the global population.
+#### **Scope**
+Organization
 
-### Level:
-User-goal level (supports global planning and decision-making).
+#### **Level**
+Primary task
 
+#### **Preconditions**
+The system has access to historical population data.
 
-### Success End Condition:
-A complete, accurate report on language speakers is generated and accepted by stakeholders.
+#### **Success End Condition**
+The system displays a report showing population changes over time.
 
-### Failed End Condition:
-Incomplete or inaccurate report, or missed deadlines.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-### Primary Actor:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-### Trigger:
-A request for global language data from senior management or strategy teams.
+#### **Trigger**
+The analyst requests a trend report to study demographic growth.
 
-### Main Success Scenario:
-1. Request initiated.
-2. Analyst clarifies requirements (e.g., native/non-native breakdowns).
-3. Access to reliable data confirmed.
-4. Data extraction and validation.
-5. Report generated with visualizations (if needed).
-6. Report reviewed and submitted to stakeholders.
-7. Feedback incorporated, if necessary.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves historical population data.
+The system presents a visual or tabular trend report.
+#### **EXTENSIONS**
+If historical data is incomplete, the system provides trends based on available information and notifies the analyst.
+If specific time periods or regions are requested, the system adjusts the report accordingly.
 
-### Extensions:
-- **Unavailable data**: Analyst identifies alternative sources or flags limitations.
-- **Data inconsistencies**: Analyst contacts data providers for clarification.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

@@ -1,40 +1,42 @@
-### USE CASE 11: **Producing the report of the population of the City in District by Descending order**
+#### **USE CASE 11: Organizing Cities in a District by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Assess population of the city trends to support district-level.
+#### **Goal in Context**
+As a data analyst, I can organize all cities within a district by population size to analyze localized urban density.
 
-#### **Scope**:
-Collect and rank data for cities in a district by population.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level task contributing to district-level planning.
+#### **Level**
+Primary task
 
-#### **Success End Condition**:
-A ranked report by population is submitted and accepted.
+#### **Preconditions**
+The system accesses city population data for the specified district.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report.
+#### **Success End Condition**
+The system generates a list of cities in a district by population in descending order.
 
-#### **Primary Actor**:
-Data Analyst / Developer
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Trigger**:
-Request from local government or management to analyze population trends in a district.
+#### **Primary Actor**
+Data Analyst
 
-#### **Main Success Scenario**:
-1. Request for district-specific population report.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Data extracted, validated, and sorted.
-5. Report generated, reviewed, and submitted.
-6. Feedback incorporated.
+#### **Trigger**
+The analyst is studying population within specific districts.
 
-#### **Extensions**:
-- **Missing data**: Seek alternatives or notify project manager.
-- **Inconsistent data**: Clarify with data providers.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects population data for cities in the district.
+The system sorts cities by population size.
+The analyst reviews data for localized urban studies.
+#### **EXTENSIONS**
+If data is missing for certain cities in the district, the system skips these entries.
+If multiple districts are selected, the system requests clarification or applies all selections.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SUB-VARIATIONS**
+None.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
+

@@ -1,43 +1,41 @@
-### USE CASE 17: **All Capital Cities in the World by Population**
+#### **USE CASE 17: Organizing Capital Cities in the World by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Provide a global overview of population demographics in capital cities for decision-making related to global strategy, market expansion, and urban development.
+#### **Goal in Context**
+As a data analyst, I can organize capital cities globally by population size to study trends among national capitals.
 
-#### **Scope**:
-Analyze population data for all capital cities worldwide, rank them by size, and generate a comprehensive report.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for global strategy and planning.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Clarification of additional data requirement.
+#### **Preconditions**
+The system accesses population data for all capital cities.
 
-#### **Success End Condition**:
-A ranked report of all capital cities by population is generated and accepted.
+#### **Success End Condition**
+The system generates a list of capital cities ordered by population.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from senior management or market researchers.
+#### **Trigger**
+The analyst reviews population trends among capital cities.
 
-#### **Main Success Scenario**:
-1. Request for a global capital city ranking initiated.
-2. Analyst clarifies additional data points.
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects data for capital cities globally.
+The system sorts cities in descending order of population.
+#### **EXTENSIONS**
+If certain capital cities are missing population data, they are skipped, and the analyst is notified.
+If there is a tie, the system organizes alphabetically by city name.
 
-#### **Extensions**:
-- Some capital city data is unavailable or outdated.
-- Data inconsistencies detected during validation.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**

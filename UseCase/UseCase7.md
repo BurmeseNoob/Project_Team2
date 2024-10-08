@@ -1,32 +1,42 @@
-### **USE CASE 7: Producing the report of the population of the City by Descending order**
+#### **USE CASE 7: Organizing Cities in the World by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-- **Goal in Context**: Analyze global urbanization trends by ranking cities by population.
-- **Scope**: Gather and organize population data for all cities globally.
-- **Level**: High-level task supporting urbanization strategy.
-- **Success End Condition**: Report accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst / Developer
-- **Trigger**: Request for city population data.
+#### **Goal in Context**
+As a data analyst, I can organize all cities worldwide by population size to identify major urban centers.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. Requirements clarified.
-3. Data sources accessed.
-4. Data extracted for cities.
-5. Data validated and cleaned.
-6. Cities ranked by population size.
-7. Report generated with insights.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Scope**
+Organization
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs project manager.
-- **Data inconsistencies**: Analyst cross-references the data.
+#### **Level**
+Primary task
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Preconditions**
+The system accesses global city population data.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Success End Condition**
+The system generates a list of cities ordered by population.
+
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst seeks insights into urban population trends.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects global city data.
+The system sorts cities by population.
+The analyst uses data for urban planning.
+
+#### **EXTENSIONS**
+If certain cities lack population data, the system skips these entries but notifies the analyst.
+If the analyst requests additional filters (e.g., by country or district), the system prompts to apply or discard them.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0

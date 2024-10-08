@@ -1,40 +1,41 @@
-### USE CASE 10: **Producing the report of the population of the City in a Country by Descending order**
+#### **USE CASE 10: Organizing Cities in a Country by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Provide urban population data for a country to support national planning, infrastructure development, and resource allocation.
+#### **Goal in Context**
+As a data analyst, I can organize cities in a country by population size to evaluate domestic urban population distribution.
 
-#### **Scope**:
-Collect and sort data for cities in a country, creating a ranked report.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level task contributing to national strategy.
+#### **Level**
+Primary task
 
-#### **Success End Condition**:
-Report ranked by population is submitted and accepted.
+#### **Preconditions**
+The system accesses population data for cities within the country.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report.
+#### **Success End Condition**
+The system generates a list of cities in descending order of population for a specific country.
 
-#### **Primary Actor**:
-Data Analyst / Developer
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Trigger**:
-Request from management or planners to analyze city population data for a country.
+#### **Primary Actor**
+Data Analyst
 
-#### **Main Success Scenario**:
-1. Request for country-specific population report.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Data extraction, validation, and sorting.
-5. Report generated, reviewed, and submitted.
-6. Feedback is incorporated.
+#### **Trigger**
+The analyst wants to evaluate urban density in the country.
 
-#### **Extensions**:
-- **Data gaps**: Seek alternatives or notify project manager.
-- **Inconsistent data**: Clarify with data providers.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for cities in the country.
+The system sorts cities by population size.
+The analyst uses the data to understand population concentration.
+#### **EXTENSIONS**
+If certain cities in the specified country are missing data, the system proceeds with the available cities and flags missing entries.
+If multiple countries are selected, the system requests clarification or applies all countries.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SUB-VARIATIONS**
+None.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

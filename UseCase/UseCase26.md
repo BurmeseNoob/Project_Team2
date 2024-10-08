@@ -1,39 +1,40 @@
-### **USE CASE 26: Generate Report on the Population of a Continent**
+#### **USE CASE 26: Retrieving the Population of the World**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-Provide a clear, accessible report on the population of a specified continent for regional planning and analysis.
+As a data analyst, I can retrieve the world’s total population to understand the global demographic scale.
 
 #### **Scope**
-Gather and analyze population data for a specific continent, optionally including country-level breakdowns.
+Organization
 
 #### **Level**
-User-goal level for regional strategy and analysis.
+Primary task
 
+#### **Preconditions**
+The system has access to global population data.
 
 #### **Success End Condition**
-A report on the continent’s population is generated and accepted.
+The system displays the current global population.
 
 #### **Failed End Condition**
-Incomplete or inaccurate report.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management for population data on the continent.
+The analyst needs an overview of global population size.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Data gathered for the continent and validated.
-3. Report generated with optional country breakdowns.
-4. Reviewed and submitted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves and displays the global population total.
+#### **EXTENSIONS**
+If the global dataset is incomplete, the system provides an estimated total based on available data.
+The system allows the analyst to specify filters (e.g., excluding certain regions).
 
-#### **Extensions**
-- Data unavailable or outdated for specific countries.
-- Inconsistent population data across sources.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

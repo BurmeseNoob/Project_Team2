@@ -1,43 +1,41 @@
-### USE CASE 14: **Produce Report on the Top N Populated Cities in a Region**
+#### **USE CASE 14: Retrieving Top N Populated Cities in a Region**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Analyze the largest cities by population in a region to support market research, resource allocation, and regional urban planning.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated cities in a region, where N is provided by the user, for regional planning.
 
-#### **Scope**:
-Gather data on the cities in a region, identifying and ranking the top **N** populated cities.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level task contributing to regional strategy and decision-making.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- **N** and region defined by the user.
+#### **Preconditions**
+The system accesses population data for cities within the specified region.
 
-#### **Success End Condition**:
-A report listing the top **N** cities by population is submitted and accepted.
+#### **Success End Condition**
+The system displays the top N populated cities in the region.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from management or planners to analyze top cities in a region.
+#### **Trigger**
+The analyst sets N to focus on top urban centers in the region.
 
-#### **Main Success Scenario**:
-1. Request for top **N** cities in a region.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Data extracted, validated, and sorted.
-5. Report generated, reviewed, and submitted.
-6. Feedback incorporated.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves region-specific data.
+The system sorts and displays the top N cities by population.
+#### **EXTENSIONS**
+If N exceeds the number of cities in the region, the system limits results accordingly.
+If data for some cities is missing, they are skipped, and the system proceeds with the remaining entries.
 
-#### **Extensions**:
-- **Unavailable data**: Seek alternatives or notify stakeholders.
-- **Inconsistent data**: Clarify with data providers.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**

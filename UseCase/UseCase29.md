@@ -1,42 +1,41 @@
-## 29. **Generate Report on the Population of a District**
+#### **USE CASE 29: Retrieving the Population of a Country**
+#### **CHARACTERISTIC INFORMATION**
 
-### Goal in Context:
-Provide a detailed report on a district’s population, including demographic breakdowns, to support localized planning and resource management.
+#### **Goal in Context**
+As a data analyst, I can retrieve the total population of a country to analyze its demographic size.
 
-### Scope:
-Gather, validate, and generate a report on total district population, optionally including demographic factors (age, gender, or geographical subdivisions).
+#### **Scope**
+Organization
 
-### Level:
-User-goal level (supports local planning and resource allocation).
+#### **Level**
+Primary task
 
+#### **Preconditions**
+The system has access to population data for the specified country.
 
-### Success End Condition:
-A complete, accurate report is generated and accepted by stakeholders.
+#### **Success End Condition**
+The system displays the population total for the country.
 
-### Failed End Condition:
-Incomplete or inaccurate report, or missed deadlines.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-### Primary Actor:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-### Trigger:
-A request for district population data from local authorities or planners.
+#### **Trigger**
+The analyst needs demographic data on the population of a specific country.
 
-### Main Success Scenario:
-1. Request initiated.
-2. Analyst clarifies requirements (e.g., demographic breakdowns).
-3. Access to reliable data confirmed.
-4. Data extraction and validation.
-5. Report generated with visualizations (if needed).
-6. Report reviewed and submitted to stakeholders.
-7. Feedback incorporated, if necessary.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves the population data for the selected country.
+The system displays the total population for that country.
+#### **EXTENSIONS**
+If the country lacks complete data, the system provides an estimate based on available information.
+The system allows specifying urban/rural filters.
 
-### Extensions:
-- **Unavailable data**: Analyst identifies alternative sources or flags limitations.
-- **Data inconsistencies**: Analyst contacts data providers for clarification.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

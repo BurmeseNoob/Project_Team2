@@ -1,40 +1,41 @@
-### **USE CASE 23: Generate Report on Population, Urban Population, and Non-Urban Population in Each Continent**
+#### **USE CASE 23: Population Analysis of People, People in Cities, and People not in Cities in Each Continent**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-Analyze the distribution of urban and non-urban populations across continents to evaluate global urbanization trends.
+As a data analyst, I can analyze the total population across each continent to understand demographic trends.
 
 #### **Scope**
-Gather and analyze population data by continent, focusing on urban and rural distribution.
+Organization
 
 #### **Level**
-User-goal level for global urbanization analysis.
+Primary task
+
+#### **Preconditions**
+The system has access to data on populations by continent.
 
 #### **Success End Condition**
-A report with insights into urbanization trends is generated and accepted.
+The system displays a report showing total population per continent.
 
 #### **Failed End Condition**
-Incomplete or incorrect report, preventing analysis.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management or urban planners.
+The analyst needs a demographic overview across continents.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Analyst gathers data on total, urban, and rural populations.
-3. Data is validated.
-4. Urbanization rates are calculated.
-5. Report with insights is generated.
-6. Reviewed and submitted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for each continent.
+The system calculates and displays the total population for each continent.
+#### **EXTENSIONS**
+If data for certain countries within a continent is missing, the system uses available data.
+If more granular data is required (e.g., by country), the system prompts for additional filters.
 
-#### **Extensions**
-- Inconsistent or missing data.
-- Feedback requires additional metrics.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

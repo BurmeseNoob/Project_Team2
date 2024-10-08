@@ -1,43 +1,40 @@
-### **USE CASE 22: Produce Report on the Top N Populated Capital Cities in a Region**
+#### **USE CASE 22: Retrieving Top N Populated Capital Cities in a Region**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-To identify the top **N** most populous capital cities in a specified region for urbanization analysis and strategic decision-making.
+As a data analyst, I can retrieve the top N populated capital cities in a region, where N is defined by the user, to understand the region’s largest capitals.
 
 #### **Scope**
-Extract, validate, and rank population data of capital cities within a specific region (e.g., Southeast Asia, West Africa) and generate a report.
+Organization
 
 #### **Level**
-User-goal level; supports regional strategy and market research.
+Primary task
 
 #### **Preconditions**
-- Tools for data analysis (sql).
+The system accesses population data for capital cities in the region.
 
 #### **Success End Condition**
-The report is generated and accepted by stakeholders.
+The system displays the top N populated capital cities in the region.
 
 #### **Failed End Condition**
-The report is incomplete, inaccurate, or delayed.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management or regional planners.
+The analyst specifies N to focus on top capital cities in a region.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Analyst clarifies **N** and additional data requirements.
-3. Data is extracted and validated from trusted sources.
-4. Top **N** cities are ranked by population.
-5. Report is generated with visualizations and insights.
-6. Reviewed, submitted, and revised if needed.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for the region’s capital cities.
+The system sorts and shows the top N capitals by population.
+#### **EXTENSIONS**
+If N exceeds the available capital cities in the region, the system limits results to the total available.
+If certain cities lack data, they are omitted from the list.
+#### **SUB-VARIATIONS**
+None.
 
-#### **Extensions**
-- Data unavailable or outdated.
-- Inconsistent population figures across sources.
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

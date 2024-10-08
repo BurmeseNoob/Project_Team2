@@ -1,42 +1,40 @@
-## 30. **Generate Report on the Population of a City**
+#### **USE CASE 30: Retrieving the Population of a District**
+#### **CHARACTERISTIC INFORMATION**
 
-### Goal in Context:
-Provide a report on the population of a city, including demographic breakdowns, for urban planning and resource allocation.
+#### **Goal in Context**
+As a data analyst, I can retrieve the population of a district to understand its demographic structure.
 
-### Scope:
-Gather, validate, and generate a report on city population, optionally including demographic or geographical factors (age, gender, neighborhoods).
+#### **Scope**
+Organization
 
-### Level:
-User-goal level (supports city planning, urban development).
+#### **Level**
+Primary task
 
+#### **Preconditions**
+The system has access to population data for the specified district.
 
-### Success End Condition:
-A complete, accurate report is generated and accepted by stakeholders.
+#### **Success End Condition**
+The system displays the population total for the district.
 
-### Failed End Condition:
-Incomplete or inaccurate report, or missed deadlines.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-### Primary Actor:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-### Trigger:
-A request for city population data from city authorities or planners.
+#### **Trigger**
+The analyst requires demographic data for a specific district.
 
-### Main Success Scenario:
-1. Request initiated.
-2. Analyst clarifies requirements (e.g., demographic breakdowns).
-3. Access to reliable data confirmed.
-4. Data extraction and validation.
-5. Report generated with visualizations (if needed).
-6. Report reviewed and submitted to stakeholders.
-7. Feedback incorporated, if necessary.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for the district.
+The system displays the total population of the district.
+#### **EXTENSIONS**
+If certain cities in the district lack data, the system provides an estimated total.
+If multiple districts are selected, the system prompts for clarification.
 
-### Extensions:
-- **Unavailable data**: Analyst identifies alternative sources or flags limitations.
-- **Data inconsistencies**: Analyst contacts data providers for clarification.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
