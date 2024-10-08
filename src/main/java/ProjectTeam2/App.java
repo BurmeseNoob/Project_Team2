@@ -95,10 +95,17 @@ public class App
         //23#
 //        pr.displayPopulationLevelInContinent();
 
+        //24#
+//        pr.displayPopulationLevelInRegion();
+
+        //25#
+
+        pr.displayPopulationLevelInCountry();
+
 
 
         //   Languages Report
-        lr.displayWorldLanguagesSpeak();
+//        lr.displayWorldLanguagesSpeak();
 
 
 
