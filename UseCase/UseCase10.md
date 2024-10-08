@@ -2,7 +2,7 @@
 #### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-As a data analyst, I can organize cities in a country by population size to evaluate domestic country population distribution.
+As a data analyst, I can organize cities in a country by population size to evaluate domestic urban population distribution.
 
 #### **Scope**
 Organization
