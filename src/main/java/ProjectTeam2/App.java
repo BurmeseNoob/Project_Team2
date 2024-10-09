@@ -15,7 +15,6 @@ public class App
         Connection ct = new Connection();
         ct.connect();
 
-
         /**
          * Instantiate the respective reports object (Country, City, Population, Language and Specific Population)
          *
@@ -29,7 +28,7 @@ public class App
         CountryReports cr = new CountryReports(ct.getConnection());
         CityReports cy = new CityReports(ct.getConnection());
         PopulationReports pr = new PopulationReports(ct.getConnection());
-        LanguagesReports lr  = new LanguagesReports(ct.getConnection());
+        LanguageReports lr  = new LanguageReports(ct.getConnection());
         SpecificPopulationReports cpr = new SpecificPopulationReports(ct.getConnection());
 
 
@@ -43,112 +42,112 @@ public class App
         *
         * */
 
-        //1# Query about retrieving  and displaying the data of the population of the Country according to the Descending Order
-        cr.displayingAboutDescendingPopulation();
-       System.out.println("");
-
-        //2# Report About the data of population of the Country order by descending according to Continent
-        cr.displayingAboutDescendingPopulationByContinent();
-       System.out.println("");
-
-        //3# Report About the data of population of the Country order by descending according to Region
-        cr.displayingAboutDescendingPopulationByRegion();
-       System.out.println("");
-
-        //4# Report about top populate country limit by user
-        cr.displayTopPouplateCountrybyUser(N);
-       System.out.println("");
-
-       //5# Report about top populate country according to Continent limit by user
-        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
-       System.out.println("");
-
-       //6# Report about top populate country according to Region limit by user
-       cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
-       System.out.println("");
-
-       /**** ----------------------------------------------------------- ****/
-
-        /*
-         * Method 7 to 16 is about the querying of the Cities population respective to Continent, Region, District, Country descending order
-         *
-         *  4 methods are respective with user N inputs value, top N rows of the table
-         *
-         * */
-
-        //7# Cities in the world organised by largest population to smallest
-        cy.displayThePopulationOfCity();
-
-        //8# Cities in a continent organised by largest population to smallest.
-        cy.getPopulationOftheCitybyContinent();
-
-        //9# Cities in a region organised by largest population to smallest.
-        cy.getPopulationOftheCitybyRegion();
-
-        //10# Cities in a country organised by largest population to smallest.
-        cy.getPopulationOftheCitybyCountry();
-
-        //11 # Cities in a district organised by largest population to smallest.
-        cy.getPopulationOfthecitybyDistrict();
-
-        //12# Top N populated cities in the world where N is provided by the user.
-        cy.displayingOutputOfTheCityPopulationTopValueByN(N);
-
-        //13# Top N populated cities in a continent where N is provided by the user
-        cy.getPopulationOftheCityByContinentTopN(N);
-
-        //14# Top N populated cities in a region where N is provided by the user.
-        cy.getPopulationOftheCityByRegionTopN(N);
-
-        //15# Top N populated cities in a country where N is provided by the user.
-        cy.getPopulationOftheCityByCountryTopN(N);
-
-        //16# Top N populated cities in a district where N is provided by the user
-        cy.getPopulationOftheCityByDistrictTopN(N);
-
-
-        /**** ----------------------------------------------------------- ****/
-
-        /*
-         * Method 17 to 22 is about the querying of the CapitalCities population respective to Continent, Region, World descending order
-         *
-         *  3 methods are respective with user N inputs value, top N rows of the table
-         *
-         * */
-
-        //17# Capital cities in the world organised by largest population to smallest.
-        cy.getPopulationOftheCapitalCities();
-
-        //18# Capital cities in a continent organised by largest population to smallest.
-        cy.getPopulationOftheCapitalCitiesInContinent();
-
-        //19# Capital cities in a region organised by largest to smallest.
-        cy.getCapitalCityInRegion();
-
-        //20# Top N populated capital cities in the world where N is provided by the user
-        cy.getTopPopulatedCapitalCities(N);
-
-        //21# Top N populated capital cities in a continent where N is provided by the user
-        cy.getTopPopulatedCapitalCitiesInContinent(N);
-
-        //22# Top N populated capital cities in a region where N is provided by the user
-        cy.getTopPopulatedCapitalCitiesInRegion(N);
-
-        /**** ----------------------------------------------------------- ****/
-
-        /*
-         * Method 23 to 25 is population of the people especially who is living in cities and who are not living
-         * in cities by continents, region and country
-         * */
-
-        //23# Population of people, people living in cities, and people not living in cities in each continent.
-        pr.displayPopulationLevelInContinent();
-
-        //24# Population of people, people living in cities, and people not living in cities in each region.
-        pr.displayPopulationLevelInRegion();
-
-        //25# Population of people, people living in cities, and people not living in cities in each country
-        pr.displayPopulationLevelInCountry();
+//        //1# Query about retrieving  and displaying the data of the population of the Country according to the Descending Order
+//        cr.displayingAboutDescendingPopulation();
+//       System.out.println("");
+//
+//        //2# Report About the data of population of the Country order by descending according to Continent
+//        cr.displayingAboutDescendingPopulationByContinent();
+//       System.out.println("");
+//
+//        //3# Report About the data of population of the Country order by descending according to Region
+//        cr.displayingAboutDescendingPopulationByRegion();
+//       System.out.println("");
+//
+//        //4# Report about top populate country limit by user
+//        cr.displayTopPouplateCountrybyUser(N);
+//       System.out.println("");
+//
+//       //5# Report about top populate country according to Continent limit by user
+//        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
+//       System.out.println("");
+//
+//       //6# Report about top populate country according to Region limit by user
+//       cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
+//       System.out.println("");
+//
+//       /**** ----------------------------------------------------------- ****/
+//
+//        /*
+//         * Method 7 to 16 is about the querying of the Cities population respective to Continent, Region, District, Country descending order
+//         *
+//         *  4 methods are respective with user N inputs value, top N rows of the table
+//         *
+//         * */
+//
+//        //7# Cities in the world organised by largest population to smallest
+//        cy.displayThePopulationOfCity();
+//
+//        //8# Cities in a continent organised by largest population to smallest.
+//        cy.getPopulationOftheCitybyContinent();
+//
+//        //9# Cities in a region organised by largest population to smallest.
+//        cy.getPopulationOftheCitybyRegion();
+//
+//        //10# Cities in a country organised by largest population to smallest.
+//        cy.getPopulationOftheCitybyCountry();
+//
+//        //11 # Cities in a district organised by largest population to smallest.
+//        cy.getPopulationOfthecitybyDistrict();
+//
+//        //12# Top N populated cities in the world where N is provided by the user.
+//        cy.displayingOutputOfTheCityPopulationTopValueByN(N);
+//
+//        //13# Top N populated cities in a continent where N is provided by the user
+//        cy.getPopulationOftheCityByContinentTopN(N);
+//
+//        //14# Top N populated cities in a region where N is provided by the user.
+//        cy.getPopulationOftheCityByRegionTopN(N);
+//
+//        //15# Top N populated cities in a country where N is provided by the user.
+//        cy.getPopulationOftheCityByCountryTopN(N);
+//
+//        //16# Top N populated cities in a district where N is provided by the user
+//        cy.getPopulationOftheCityByDistrictTopN(N);
+//
+//
+//        /**** ----------------------------------------------------------- ****/
+//
+//        /*
+//         * Method 17 to 22 is about the querying of the CapitalCities population respective to Continent, Region, World descending order
+//         *
+//         *  3 methods are respective with user N inputs value, top N rows of the table
+//         *
+//         * */
+//
+//        //17# Capital cities in the world organised by largest population to smallest.
+//        cy.getPopulationOftheCapitalCities();
+//
+//        //18# Capital cities in a continent organised by largest population to smallest.
+//        cy.getPopulationOftheCapitalCitiesInContinent();
+//
+//        //19# Capital cities in a region organised by largest to smallest.
+//        cy.getCapitalCityInRegion();
+//
+//        //20# Top N populated capital cities in the world where N is provided by the user
+//        cy.getTopPopulatedCapitalCities(N);
+//
+//        //21# Top N populated capital cities in a continent where N is provided by the user
+//        cy.getTopPopulatedCapitalCitiesInContinent(N);
+//
+//        //22# Top N populated capital cities in a region where N is provided by the user
+//        cy.getTopPopulatedCapitalCitiesInRegion(N);
+//
+//        /**** ----------------------------------------------------------- ****/
+//
+//        /*
+//         * Method 23 to 25 is population of the people especially who is living in cities and who are not living
+//         * in cities by continents, region and country
+//         * */
+//
+//        //23# Population of people, people living in cities, and people not living in cities in each continent.
+//        pr.displayPopulationLevelInContinent();
+//
+//        //24# Population of people, people living in cities, and people not living in cities in each region.
+//        pr.displayPopulationLevelInRegion();
+//
+//        //25# Population of people, people living in cities, and people not living in cities in each country
+//        pr.displayPopulationLevelInCountry();
 
         /**** ----------------------------------------------------------- ****/
 
@@ -157,22 +156,34 @@ public class App
          * */
 
         //26# Population of the world
-        cpr.displayWorldPopulation();
+        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
+        cpr.displayWorldPopulation(resultWorld);
 
         //27# Population of a continent
-        cpr.displayContinentPopulation();
+        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
+        cpr.displayContinentPopulation(resultContinent);
 
         //28# Population of a region
-        cpr.displayRegionPopulation();
+        // 1st Store the  array list return from RegionPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
+        cpr.displayRegionPopulation(resultRegion);
 
         //29# Population of a country
-        cpr.displayCountryPopulation();
+        // 1st Store the  array list return from CountryPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultCountry = cpr.getCountryPopulation();
+        cpr.displayCountryPopulation(resultCountry);
 
         //30# Population of a district
-        cpr.displayDistrictPopulation();
+        // 1st Store the  array list return from DistrictPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultDistrict = cpr.getDistrictPopulation();
+        cpr.displayDistrictPopulation(resultDistrict);
 
         //31# Population of a city
-        cpr.displayCityPopulation();
+        // 1st Store the  array list return from DistrictPopulation and Use in the Display method
+        ArrayList<SpecificPopulation> resultCity = cpr.getCityPopulation();
+        cpr.displayCityPopulation(resultCity);
 
         /**** ----------------------------------------------------------- ****/
 
@@ -182,7 +193,9 @@ public class App
          * */
 
         //32#Languages Report
-       lr.displayWorldLanguagesSpeak();
+        //Store the languages data into list and pass the parameter to the display method
+        ArrayList<LanguageData> ld = lr.getWorldLanguagesSpeak();
+       lr.displayWorldLanguagesSpeak(ld);
 
 
 

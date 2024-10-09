@@ -956,7 +956,6 @@ public class CityReports {
                         rset.getInt("Population")
                 ));
             }
-
             // display through city list
             cityReportFormat(cityList);
         }

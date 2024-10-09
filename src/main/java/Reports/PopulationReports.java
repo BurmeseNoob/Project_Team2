@@ -19,6 +19,13 @@ public class  PopulationReports {
     // Initiate the PopulationReports Display format
     public void displayFormatforPopulationReports(ArrayList<PopulationLevel> pops)
     {
+
+        //checking the population level record is null
+        if (pops == null || pops.size() == 0)
+        {
+            System.out.println("No population data found");
+            return;
+        }
         ArrayList<PopulationLevel> poplists = pops;
         //Table header format
         System.out.println("+-------------------------------------------------+----------------------+----------------------+-----------------+-----------------------------+-------------------+");
@@ -31,6 +38,8 @@ public class  PopulationReports {
 
         for(PopulationLevel pop : poplists)
         {
+            if (pop == null)
+                continue;
             System.out.printf("| %-47s | %,20d | %,20d |     %8.2f%%   | %,27d |     %8.2f%%      | %n",
                     pop.getName(),pop.getTotalPopulation(),pop.getPopulationInCities(),pop.getPercentagesInCities(),pop.getPopulationNotInCities(),pop.getPercentagesNotInCities());
         }
@@ -140,6 +149,7 @@ public class  PopulationReports {
         displayFormatforPopulationReports(getPopulationLevelInRegion());
         System.out.println("");
     }
+
     //25# (Population of people, people living in cities, and people not living in cities in each Country)
     public ArrayList<PopulationLevel> getPopulationLevelInCountry() throws SQLException
     {
