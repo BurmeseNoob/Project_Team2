@@ -15,6 +15,34 @@ public class CountryReports {
         this.con = con;
     }
 
+
+    // Table Format For Country Report Displaying
+    public void displayTableFormat(ArrayList<Country> countries) {
+
+        if (countries == null || countries.size() == 0)
+        {
+            System.out.println("No data found");
+            return;
+        }
+        System.out.println("+---------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.printf("%| -20s | %-25s | %-20s | %-35s | %-49s | %-39s |%n", "CountryCode", "Name", "Continent", "Region", "Population", "Capital");
+        System.out.println("+---------------------------------------------------------------------------------------------------------------------------------+");
+        for(Country country : countries) {
+            if(country == null)
+            {
+                continue;
+            }
+            System.out.printf("%| -20s | %-25s | %-20s | %-35s | %,49d | %-39s |%n",
+                    country.getCode(),
+                    country.getName(),
+                    country.getContinent(),
+                    country.getRegion(),
+                    country.getPopulation(),
+                    country.getCapital());
+
+        }
+    }
+
     //#1 (countries in the world organised by largest population to smallest)
     public ArrayList<Country> getDescendingPopulationOfCountry()
     {
@@ -47,7 +75,6 @@ public class CountryReports {
                 //add data to the arraylist
                 report.add(ct);
             }
-
             // Return the report list
             return report;
         }
@@ -59,37 +86,22 @@ public class CountryReports {
         }
     }
 
-    public void displayingAboutDescendingPopulation()
+    public void displayingAboutDescendingPopulation(ArrayList<Country> countries)
     {
-        ArrayList<Country> report = getDescendingPopulationOfCountry();
+        ArrayList<Country> report = countries;
 
         System.out.println("+----------------------------------------------------------------+");
-        System.out.println("+       Lists of the Country Population Descending Order        +");
+        System.out.println("+       Lists of the Country Population Descending Order         +");
         System.out.println("+----------------------------------------------------------------+");
-
-
         // Checking about list is not null
         if (report != null && !report.isEmpty())
         {
-            System.out.println("+-----------------------------------------------------------------------------------------------------------------------------+");
-            System.out.printf("%-10s %-30s %-20s %-20s %-49s %-39s%n", "CountryCode", "Name", "Continent", "Region", "Population", "Capital");
-            System.out.println("+-----------------------------------------------------------------------------------------------------------------------------+");
-
-            // Loop through the ArrayList and display each country in table format
-            for (Country country : report)
-            {
-                System.out.printf("%-10s %-30s %-20s %-20s %-49s %-39s%n",
-                        country.getCode(),
-                        country.getName(),
-                        country.getContinent(),
-                        country.getRegion(),
-                        country.getPopulation(),
-                        country.getCapital());
-            }
+            displayTableFormat(report);
         }
         else
         {
             System.out.println("No countries found.");
+            return;
         }
     }
 
@@ -145,10 +157,15 @@ public class CountryReports {
         }
 
     }
-    public void displayingAboutDescendingPopulationByContinent()
+    public void displayingAboutDescendingPopulationByContinent(ArrayList<String> continents)
     {
         //Arraylist of getting Distinct Continent
-        ArrayList<String> continents = getDistinctContinent();
+        ArrayList<String> continentsList = getDistinctContinent();
+        if (continentsList == null && continentsList.isEmpty())
+        {
+            System.out.println("No countries found.");
+            return;
+        }
         //Iterating the Cotinent arraylist and querying specific population
         for(String continent: continents)
         {
@@ -158,13 +175,8 @@ public class CountryReports {
 
             ArrayList<Country> countries= getDescendingPopulatinOfCountryByContinent(continent);
 
-            for (Country country : countries)
-            {
-                System.out.println("Country Code: " + country.getCode() +
-                                    ",  Name: " + country.getName() +
-                                    ",  Region: " + country.getRegion() +
-                                    ",  Population: " + country.getPopulation());
-            }
+            //Displaying Table format
+            displayTableFormat(countries);
         }
 
     }
@@ -216,7 +228,6 @@ public class CountryReports {
                 );
                 regionList.add(ct);
             }
-
             return regionList;
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -224,12 +235,17 @@ public class CountryReports {
 
     }
 
-    public void displayingAboutDescendingPopulationByRegion()
+    public void displayingAboutDescendingPopulationByRegion(ArrayList<String> regions)
     {
         //Arraylist of getting Distinct Continent
-        ArrayList<String> regions = getDistinctRegion();
-        //Iterating the Cotinent arraylist and querying specific population
-        for(String region: regions)
+        ArrayList<String> regionsList = regions;
+        if (regionsList == null && regionsList.isEmpty())
+        {
+            System.out.println("No countries found.");
+            return;
+        }
+        //Iterating the Regions arraylist and querying specific population
+        for(String region: regionsList)
         {
             System.out.println("");
             System.out.println("Descend order of Population in Region of : " + "<" + region + ">");
@@ -237,13 +253,8 @@ public class CountryReports {
 
             ArrayList<Country> countries= getDescendingPopulatinOfCountryByRegion(region);
 
-            for (Country country : countries)
-            {
-                System.out.println("Country Code: " + country.getCode() +
-                        ",  Name: " + country.getName() +
-                        ",  Region: " + country.getRegion() +
-                        ",  Population: " + country.getPopulation());
-            }
+            //Displaying the output calling by methods
+            displayTableFormat(countries);
         }
 
     }
@@ -291,13 +302,8 @@ public class CountryReports {
         System.out.println("Top " + N + " populated Countries ! ");
         System.out.println("_______________________________________________________________________");
 
-        for (Country country : countries) {
-            System.out.println("CountryCode: " + country.getCode() +
-                    ",  Name: " + country.getName() +
-                    ",  Region: " + country.getRegion() +
-                    ",  Population: " + country.getPopulation());
-        }
-
+        //Displaying the output by method calling
+        displayTableFormat(countries);
     }
 
     //#########################################################################
