@@ -42,29 +42,32 @@ public class App
         *
         * */
 
-//        //1# Query about retrieving  and displaying the data of the population of the Country according to the Descending Order
-//        cr.displayingAboutDescendingPopulation();
-//       System.out.println("");
+// 1# Query about retrieving and displaying the data of the population of the Country according to the Descending Order
+//        ArrayList<Country> countries = cr.getDescendingPopulationOfCountry();
+//        cr.displayingAboutDescendingPopulation(countries);
+//        System.out.println("");
 //
-//        //2# Report About the data of population of the Country order by descending according to Continent
-//        cr.displayingAboutDescendingPopulationByContinent();
-//       System.out.println("");
+//// 2# Report About the data of population of the Country ordered by descending according to Continent
+//        ArrayList<String> dcont = cr.getDistinctContinent();
+//        cr.displayingAboutDescendingPopulationByContinent(dcont); // Fix: Added 'cr.' to call the method correctly
+//        System.out.println("");
 //
-//        //3# Report About the data of population of the Country order by descending according to Region
-//        cr.displayingAboutDescendingPopulationByRegion();
-//       System.out.println("");
+//// 3# Report About the data of population of the Country ordered by descending according to Region
+//        ArrayList<String> regions = cr.getDistinctRegion(); // Fix: Get distinct regions
+//        cr.displayingAboutDescendingPopulationByRegion(regions); // Fix: Call the method correctly
+//        System.out.println("");
 //
-//        //4# Report about top populate country limit by user
-//        cr.displayTopPouplateCountrybyUser(N);
-//       System.out.println("");
+//// 4# Report about the top populated country limited by user
+//        cr.displayTopPouplateCountrybyUser(N); // Fix: Call the method directly
+//        System.out.println("");
 //
-//       //5# Report about top populate country according to Continent limit by user
-//        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
-//       System.out.println("");
+//// 5# Report about the top populated country according to Continent limited by user
+//        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N); // Fix: Call the method directly
+//        System.out.println("");
 //
-//       //6# Report about top populate country according to Region limit by user
-//       cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
-//       System.out.println("");
+//// 6# Report about the top populated country according to Region limited by user
+//        cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N); // Fix: Call the method directly
+//        System.out.println("");
 //
 //       /**** ----------------------------------------------------------- ****/
 //
@@ -75,36 +78,45 @@ public class App
 //         *
 //         * */
 //
-//        //7# Cities in the world organised by largest population to smallest
-//        cy.displayThePopulationOfCity();
+/// 7. Cities in the world organised by largest population to smallest
+        ArrayList<City> allCities = cy.getPopulationOftheCitybyDescendingOrder(); // get the list
+        cy.cityReportFormat(allCities); // display the formatted report
+
+// 8. Cities in a continent organised by largest population to smallest
+        ArrayList<String> distinctContinents = cy.getDistinctContinent();
+        cy.getPopulationOftheCitybyContinent(distinctContinents);
+
+// 9. Cities in a region organised by largest population to smallest
+        ArrayList<String> distinctRegions = cy.getDistinctRegion();
+        cy.getPopulationOftheCitybyRegion(distinctRegions);
+
+// 10. Cities in a country organised by largest population to smallest
+        ArrayList<String> distinctCountries = cy.getDistinctCountry();
+        cy.getPopulationOftheCitybyCountry(distinctCountries);
+
+// 11. Cities in a district organised by largest population to smallest
+        ArrayList<String> distinctDistricts = cy.getDistinctDistrict();
+        cy.getPopulationOfthecitybyDistrict(distinctDistricts);
+
+// 12. Top N populated cities in the world where N is provided by the user
+        ArrayList<City> topCities = cy.getPopulationOfthecity(N);
+        cy.displayingOutputOfTheCityPopulationTopValueByN(topCities, N);
 //
-//        //8# Cities in a continent organised by largest population to smallest.
-//        cy.getPopulationOftheCitybyContinent();
-//
-//        //9# Cities in a region organised by largest population to smallest.
-//        cy.getPopulationOftheCitybyRegion();
-//
-//        //10# Cities in a country organised by largest population to smallest.
-//        cy.getPopulationOftheCitybyCountry();
-//
-//        //11 # Cities in a district organised by largest population to smallest.
-//        cy.getPopulationOfthecitybyDistrict();
-//
-//        //12# Top N populated cities in the world where N is provided by the user.
-//        cy.displayingOutputOfTheCityPopulationTopValueByN(N);
-//
-//        //13# Top N populated cities in a continent where N is provided by the user
-//        cy.getPopulationOftheCityByContinentTopN(N);
-//
-//        //14# Top N populated cities in a region where N is provided by the user.
-//        cy.getPopulationOftheCityByRegionTopN(N);
-//
-//        //15# Top N populated cities in a country where N is provided by the user.
-//        cy.getPopulationOftheCityByCountryTopN(N);
-//
-//        //16# Top N populated cities in a district where N is provided by the user
-//        cy.getPopulationOftheCityByDistrictTopN(N);
-//
+// 13. Top N populated cities in a continent where N is provided by the user
+        int NContinent = 15;
+        cy.getPopulationOftheCityByContinentTopN(NContinent);
+
+// 14. Top N populated cities in a region where N is provided by the user
+        int NRegion = 5;
+        cy.getPopulationOftheCityByRegionTopN(NRegion);
+
+// 15. Top N populated cities by Country where N is provided by the user
+        int NCountry = 8;
+        cy.getPopulationOftheCityByCountryTopN(NCountry);
+
+// 16. Top N populated cities in a district where N is provided by the user
+        int NDistrict = 9;
+        cy.getPopulationOftheCityByDistrictTopN(NDistrict);
 //
 //        /**** ----------------------------------------------------------- ****/
 //
@@ -155,35 +167,35 @@ public class App
          * Method 26 to 31 is the querying about the population of the world, specific continent, region, country , district and city.
          * */
 
-        //26# Population of the world
-        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
-        cpr.displayWorldPopulation(resultWorld);
-
-        //27# Population of a continent
-        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
-        cpr.displayContinentPopulation(resultContinent);
-
-        //28# Population of a region
-        // 1st Store the  array list return from RegionPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
-        cpr.displayRegionPopulation(resultRegion);
+//        //26# Population of the world
+//        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
+//        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
+//        cpr.displayWorldPopulation(resultWorld);
+//
+//        //27# Population of a continent
+//        // 1st Store the  array list return from get ContinentPopulation and Use in the Display method
+//        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
+//        cpr.displayContinentPopulation(resultContinent);
+//
+//        //28# Population of a region
+//        // 1st Store the  array list return from RegionPopulation and Use in the Display method
+//        ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
+//        cpr.displayRegionPopulation(resultRegion);
 
         //29# Population of a country
-        // 1st Store the  array list return from CountryPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultCountry = cpr.getCountryPopulation();
-        cpr.displayCountryPopulation(resultCountry);
+//        // 1st Store the  array list return from CountryPopulation and Use in the Display method
+//        ArrayList<SpecificPopulation> resultCountry = cpr.getCountryPopulation();
+//        cpr.displayCountryPopulation(resultCountry);
 
         //30# Population of a district
         // 1st Store the  array list return from DistrictPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultDistrict = cpr.getDistrictPopulation();
-        cpr.displayDistrictPopulation(resultDistrict);
+//        ArrayList<SpecificPopulation> resultDistrict = cpr.getDistrictPopulation();
+//        cpr.displayDistrictPopulation(resultDistrict);
 
         //31# Population of a city
         // 1st Store the  array list return from DistrictPopulation and Use in the Display method
-        ArrayList<SpecificPopulation> resultCity = cpr.getCityPopulation();
-        cpr.displayCityPopulation(resultCity);
+//        ArrayList<SpecificPopulation> resultCity = cpr.getCityPopulation();
+//        cpr.displayCityPopulation(resultCity);
 
         /**** ----------------------------------------------------------- ****/
 
@@ -194,8 +206,8 @@ public class App
 
         //32#Languages Report
         //Store the languages data into list and pass the parameter to the display method
-        ArrayList<LanguageData> ld = lr.getWorldLanguagesSpeak();
-       lr.displayWorldLanguagesSpeak(ld);
+//        ArrayList<LanguageData> ld = lr.getWorldLanguagesSpeak();
+//        lr.displayWorldLanguagesSpeak(ld);
 
 
 

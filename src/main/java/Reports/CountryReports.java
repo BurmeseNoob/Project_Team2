@@ -25,22 +25,21 @@ public class CountryReports {
             return;
         }
         System.out.println("+---------------------------------------------------------------------------------------------------------------------------------+");
-        System.out.printf("%| -20s | %-25s | %-20s | %-35s | %-49s | %-39s |%n", "CountryCode", "Name", "Continent", "Region", "Population", "Capital");
+        System.out.printf("| %-20s | %-25s | %-20s | %-35s | %-49s | %-39s |%n", "CountryCode", "Name", "Continent", "Region", "Population", "Capital");
         System.out.println("+---------------------------------------------------------------------------------------------------------------------------------+");
-        for(Country country : countries) {
-            if(country == null)
-            {
+        for (Country country : countries) {
+            if (country == null) {
                 continue;
             }
-            System.out.printf("%| -20s | %-25s | %-20s | %-35s | %,49d | %-39s |%n",
+            System.out.printf("| %-20s | %-25s | %-20s | %-35s | %,49d | %-39s |%n",
                     country.getCode(),
                     country.getName(),
                     country.getContinent(),
                     country.getRegion(),
                     country.getPopulation(),
                     country.getCapital());
-
         }
+
     }
 
     //#1 (countries in the world organised by largest population to smallest)
@@ -161,14 +160,14 @@ public class CountryReports {
     public void displayingAboutDescendingPopulationByContinent(ArrayList<String> continents)
     {
         //Arraylist of getting Distinct Continent
-        ArrayList<String> continentsList = getDistinctContinent();
+        ArrayList<String> continentsList = continents;
         if (continentsList == null && continentsList.isEmpty())
         {
             System.out.println("No countries found.");
             return;
         }
         //Iterating the Cotinent arraylist and querying specific population
-        for(String continent: continents)
+        for(String continent: continentsList)
         {
             System.out.println("");
             System.out.println("Descend order of Population in Country of : " + "<" + continent + ">");
@@ -309,53 +308,43 @@ public class CountryReports {
 
     //#########################################################################
     //#5 (populated countries in the world according to top values give by user and each Continent)
-    public void displayTopPopulatedCountryAccordingtoContinentByUserInput(int N)
-    {
+    public void displayTopPopulatedCountryAccordingtoContinentByUserInput(int N) {
         ArrayList<String> Dcontinents = getDistinctContinent();
 
-        for(String continent : Dcontinents)
-        {
+        for (String continent : Dcontinents) {
             ArrayList<Country> Countries = getDescendingPopulatinOfCountryByContinent(continent);
             System.out.println("");
-            System.out.println("Top " + N + " Descend order of Population in Country of : " + "<" + continent + ">");
+            System.out.println("Top " + N + " Descending Order of Population in Country of: <" + continent + ">");
             System.out.println("_______________________________________________________________________");
 
-            // Check if  the users' N exceeds the number of countries in this continent
+            // Check if the user's N exceeds the number of countries in this continent
             int limit = Math.min(N, Countries.size());
-            //Slice the Countries arraylist according to user input
-            for(int i =0; i < limit; i++ )
-            {
-                Country ct = Countries.get(i);
-                System.out.println("Country Code: " + ct.getCode() +
-                        ",  Name: " + ct.getName() +
-                        ",  Region: " + ct.getRegion() +
-                        ",  Population: " + ct.getPopulation());
-            }
+            // Slice the Countries ArrayList according to user input
+            ArrayList<Country> topCountries = new ArrayList<>(Countries.subList(0, limit));
+
+            // Display top countries in table format
+            displayTableFormat(topCountries);
         }
     }
     //#########################################################################
     //#6 (populated countries in the world according to top values give by user and each Region)
     //same as report 5 codes
-    public void displayTopPopulatedCountryAccordingtoRegionByUserInput(int N)
-    {
+    public void displayTopPopulatedCountryAccordingtoRegionByUserInput(int N) {
         ArrayList<String> Dregions = getDistinctRegion();
-        for(String region : Dregions)
-        {
+
+        for (String region : Dregions) {
             ArrayList<Country> Countries = getDescendingPopulatinOfCountryByRegion(region);
             System.out.println("");
-            System.out.println("Top " + N + " Descend order of Population in Country of : " + "<" + region + ">");
+            System.out.println("Top " + N + " Descending Order of Population in Country of: <" + region + ">");
             System.out.println("_______________________________________________________________________");
 
+            // Check if the user's N exceeds the number of countries in this region
             int limit = Math.min(N, Countries.size());
-            //Slice the Countries arraylist according to user input
-            for(int i =0; i < limit; i++ )
-            {
-                Country ct = Countries.get(i);
-                System.out.println("Country Code: " + ct.getCode() +
-                        ",  Name: " + ct.getName() +
-                        ",  Region: " + ct.getRegion() +
-                        ",  Population: " + ct.getPopulation());
-            }
+            // Slice the Countries ArrayList according to user input
+            ArrayList<Country> topCountries = new ArrayList<>(Countries.subList(0, limit));
+
+            // Display top countries in table format
+            displayTableFormat(topCountries);
         }
     }
 
