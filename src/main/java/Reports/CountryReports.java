@@ -157,6 +157,7 @@ public class CountryReports {
         }
 
     }
+
     public void displayingAboutDescendingPopulationByContinent(ArrayList<String> continents)
     {
         //Arraylist of getting Distinct Continent
@@ -344,7 +345,6 @@ public class CountryReports {
             System.out.println("");
             System.out.println("Top " + N + " Descend order of Population in Country of : " + "<" + region + ">");
             System.out.println("_______________________________________________________________________");
-
 
             int limit = Math.min(N, Countries.size());
             //Slice the Countries arraylist according to user input
