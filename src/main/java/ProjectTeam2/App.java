@@ -49,8 +49,8 @@ public class App {
         int N = 10;
 
         // Separate each reporting task into its own method
-        runCountryReports(cr, N);
-        runCityReports(cy, N);
+//        runCountryReports(cr, N);
+//        runCityReports(cy, N);
         runPopulationReports(pr, cpr, N);
         runLanguageReports(lr);
 

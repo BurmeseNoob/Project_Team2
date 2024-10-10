@@ -38,7 +38,7 @@ class ConnectionTest {
                 .thenReturn(mockConnection);
 
         // Act
-        connection.connect();
+        connection.connect("localhost:33060", 30000);
 
         // Assert
         assertNotNull(connection.getConnection(), "Connection should not be null after successful connection.");
@@ -50,7 +50,7 @@ class ConnectionTest {
         Connection mockConnection = mock(Connection.class);
         mockedDriverManager.when(() -> DriverManager.getConnection(anyString(), anyString(), anyString()))
                 .thenReturn(mockConnection);
-        connection.connect();  // Establish connection first
+        connection.connect("localhost:33060", 30000);  // Establish connection first
 
         // Act
         connection.disconnect();
@@ -60,7 +60,7 @@ class ConnectionTest {
     }
     @Test
     public void testGetConnectionAfterDisconnect() {
-        connection.connect(); // Establish connection
+        connection.connect("localhost:33060", 30000); // Establish connection
         connection.disconnect(); // Call disconnect method
         assertNull(connection.getConnection()); // Ensure connection is null after disconnect
     }
