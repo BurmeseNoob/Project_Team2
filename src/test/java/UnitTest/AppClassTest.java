@@ -74,7 +74,7 @@ public class AppClassTest {
         // Run the test method
         app.runCountryReports(mockCountryReports, 10);
 
-        // Verify if the methods were called
+        // Verify if the methods were called about Country
         verify(mockCountryReports).getDescendingPopulationOfCountry();
         verify(mockCountryReports).displayingAboutDescendingPopulation(mockCountries);
         verify(mockCountryReports).getDistinctContinent();
@@ -110,7 +110,7 @@ public class AppClassTest {
         // Run the test method
         app.runCityReports(mockCityReports, 10);
 
-        // Verify the methods were called
+        // Verify the methods were called About City
         verify(mockCityReports).getPopulationOftheCitybyDescendingOrder();
         verify(mockCityReports).cityReportFormat(mockCities);
         verify(mockCityReports).getDistinctContinent();
@@ -141,7 +141,7 @@ public class AppClassTest {
         // Run the test method
         app.runPopulationReports(mockPopulationReports, mockSpecificPopulationReports, 10);
 
-        // Verify if methods were called
+        // Verify if methods were called Population Level according to Continents / Region / Country
         verify(mockPopulationReports).displayPopulationLevelInContinent();
         verify(mockPopulationReports).displayPopulationLevelInRegion();
         verify(mockPopulationReports).displayPopulationLevelInCountry();

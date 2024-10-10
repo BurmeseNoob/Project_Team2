@@ -16,10 +16,18 @@ import java.util.ArrayList;
 
 
 public class PopulationReportsTest {
+    // Declare an instance of the PopulationReports class to test population-related reports
     private PopulationReports populationReports;
+
+    // Declare a mock connection object to simulate the database connection
     private Connection mockConnection;
+
+    // Declare a mock statement object to simulate SQL statements
     private Statement mockStatement;
+
+    // Declare a mock result set object to simulate the result set returned by database queries
     private ResultSet mockResultSet;
+
 
     @BeforeEach
     public void setUp() throws SQLException {

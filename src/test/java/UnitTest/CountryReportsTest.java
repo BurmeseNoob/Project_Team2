@@ -18,10 +18,18 @@ import static org.mockito.Mockito.*;
 
 public class CountryReportsTest {
 
+    // Mocked Connection object to simulate database connection without using a real database
     private Connection mockConnection;
+
+    // Mocked Statement object to simulate SQL statements being executed
     private Statement mockStatement;
+
+    // Mocked ResultSet object to simulate the result of SQL queries
     private ResultSet mockResultSet;
+
+    // Instance of the CountryReports class used to generate reports
     private CountryReports countryReports;
+
 
     @BeforeEach
     public void setUp() throws Exception {

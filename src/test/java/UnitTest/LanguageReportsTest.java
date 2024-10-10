@@ -18,10 +18,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class LanguageReportsTest {
+    // Declare a LanguageReports object to handle language-related reports
     private LanguageReports languagesReports;
+
+    // Mock object to simulate a database connection
     private Connection mockConnection;
+
+    // Mock object to simulate a SQL statement
     private Statement mockStatement;
+
+    // Mock object to simulate the result set returned by a SQL query
     private ResultSet mockResultSet;
+
 
     @BeforeEach
     //Inistiating the object (connection, reports object)

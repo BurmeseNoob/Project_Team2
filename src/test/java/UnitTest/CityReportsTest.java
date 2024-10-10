@@ -22,10 +22,18 @@ import static org.mockito.Mockito.*;
 
 public class CityReportsTest {
 
+    // Mocked Connection object to simulate a database connection for testing
     private Connection mockConnection;
+
+    // Mocked Statement object to simulate executing SQL statements
     private Statement mockStatement;
+
+    // Mocked ResultSet object to simulate the result of an SQL query
     private ResultSet mockResultSet;
+
+    // Instance of the CityReports class used for generating city-related reports
     private CityReports cityReports;
+
 
     @BeforeEach
     public void setUp() throws SQLException {

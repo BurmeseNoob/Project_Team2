@@ -40,9 +40,9 @@ public class App {
         // Default setting: user input N value to test in the docker output
         int N = 10;
 
-        // Separate each reporting task into its own method
-        runCountryReports(cr, N);
-        runCityReports(cy, N);
+//        // Separate each reporting task into its own method
+//        runCountryReports(cr, N);
+//        runCityReports(cy, N);
         runPopulationReports(pr, cpr, N);
         runLanguageReports(lr);
 
