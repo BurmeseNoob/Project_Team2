@@ -22,7 +22,7 @@ jobs:
           docker-compose --version
 
       - name: Run Unit Tests
-        run: mvn -Dtest=UnitTest.SpecificPopulationReportTest test
+        run: mvn -Dtest=UnitTest.* test
 
       - name: Package the application and run Docker Compose
         run: |

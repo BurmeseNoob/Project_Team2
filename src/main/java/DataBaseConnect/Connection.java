@@ -7,15 +7,12 @@ public class Connection {
     private java.sql.Connection con = null;
     public void connect()
     {
-        try
-        {
-            // Load Database driver
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        }
-        catch (ClassNotFoundException e)
-        {
+            // Connection logic here
+        } catch (ClassNotFoundException e) {
             System.out.println("Could not load SQL driver");
-            System.exit(-1);
+            throw new RuntimeException("Could not load SQL driver", e); // or any custom exception
         }
 
         int retries = 10;
@@ -59,6 +56,7 @@ public class Connection {
             {
                 // Close connection
                 con.close();
+                con = null;
             }
             catch (Exception e)
             {
