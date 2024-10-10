@@ -62,59 +62,59 @@ public class App {
          * */
 
         // 1# Query about retrieving and displaying the data of the population of the Country according to the Descending Order
-        ArrayList<Country> countries = cr.getDescendingPopulationOfCountry();
-        cr.displayingAboutDescendingPopulation(countries);
-
-        // 2# Report About the data of population of the Country ordered by descending according to Continent
-        ArrayList<String> dcont = cr.getDistinctContinent();
-        cr.displayingAboutDescendingPopulationByContinent(dcont);
-
-        ArrayList<String> regions = cr.getDistinctRegion();
-        cr.displayingAboutDescendingPopulationByRegion(regions);
-
-        cr.displayTopPouplateCountrybyUser(N);
-        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
-        cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
+//        ArrayList<Country> countries = cr.getDescendingPopulationOfCountry();
+//        cr.displayingAboutDescendingPopulation(countries);
+//
+//        // 2# Report About the data of population of the Country ordered by descending according to Continent
+//        ArrayList<String> dcont = cr.getDistinctContinent();
+//        cr.displayingAboutDescendingPopulationByContinent(dcont);
+//
+//        ArrayList<String> regions = cr.getDistinctRegion();
+//        cr.displayingAboutDescendingPopulationByRegion(regions);
+//
+//        cr.displayTopPouplateCountrybyUser(N);
+//        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
+//        cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
     }
 
     public void runCityReports(CityReports cy, int N) throws SQLException {
-        ArrayList<City> allCities = cy.getPopulationOftheCitybyDescendingOrder();
-        cy.cityReportFormat(allCities);
-
-        ArrayList<String> distinctContinents = cy.getDistinctContinent();
-        cy.getPopulationOftheCitybyContinent(distinctContinents);
-
-        ArrayList<String> distinctRegions = cy.getDistinctRegion();
-        cy.getPopulationOftheCitybyRegion(distinctRegions);
-
-        ArrayList<String> distinctCountries = cy.getDistinctCountry();
-        cy.getPopulationOftheCitybyCountry(distinctCountries);
-
-        ArrayList<String> distinctDistricts = cy.getDistinctDistrict();
-        cy.getPopulationOfthecitybyDistrict(distinctDistricts);
-
-        ArrayList<City> topCities = cy.getPopulationOfthecity(N);
-        cy.displayingOutputOfTheCityPopulationTopValueByN(topCities, N);
-
-        cy.getPopulationOftheCityByContinentTopN(N);
-        cy.getPopulationOftheCityByRegionTopN(N);
-        cy.getPopulationOftheCityByCountryTopN(N);
-        cy.getPopulationOftheCityByDistrictTopN(N);
+//        ArrayList<City> allCities = cy.getPopulationOftheCitybyDescendingOrder();
+//        cy.cityReportFormat(allCities);
+//
+//        ArrayList<String> distinctContinents = cy.getDistinctContinent();
+//        cy.getPopulationOftheCitybyContinent(distinctContinents);
+//
+//        ArrayList<String> distinctRegions = cy.getDistinctRegion();
+//        cy.getPopulationOftheCitybyRegion(distinctRegions);
+//
+//        ArrayList<String> distinctCountries = cy.getDistinctCountry();
+//        cy.getPopulationOftheCitybyCountry(distinctCountries);
+//
+//        ArrayList<String> distinctDistricts = cy.getDistinctDistrict();
+//        cy.getPopulationOfthecitybyDistrict(distinctDistricts);
+//
+//        ArrayList<City> topCities = cy.getPopulationOfthecity(N);
+//        cy.displayingOutputOfTheCityPopulationTopValueByN(topCities, N);
+//
+//        cy.getPopulationOftheCityByContinentTopN(N);
+//        cy.getPopulationOftheCityByRegionTopN(N);
+//        cy.getPopulationOftheCityByCountryTopN(N);
+//        cy.getPopulationOftheCityByDistrictTopN(N);
 
 
     }
 
     public void runPopulationReports(PopulationReports pr, SpecificPopulationReports cpr, int N) throws SQLException {
-        pr.displayPopulationLevelInContinent();
-        pr.displayPopulationLevelInRegion();
-        pr.displayPopulationLevelInCountry();
-
-        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
-        cpr.displayWorldPopulation(resultWorld);
-
-        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
-        cpr.displayContinentPopulation(resultContinent);
-
+//        pr.displayPopulationLevelInContinent();
+//        pr.displayPopulationLevelInRegion();
+//        pr.displayPopulationLevelInCountry();
+//
+//        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
+//        cpr.displayWorldPopulation(resultWorld);
+//
+//        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
+//        cpr.displayContinentPopulation(resultContinent);
+//
         ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
         cpr.displayRegionPopulation(resultRegion);
 
