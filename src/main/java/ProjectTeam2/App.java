@@ -15,10 +15,10 @@ public class App {
 
         Connection ct = new Connection();
 
-        if(args.length < 2){
-            ct.connect("localhost:3306", 30000);
+        if(args.length < 1){
+            ct.connect("localhost:33060", 30000);
         }else{
-            ct.connect(args[0], Integer.parseInt(args[1]));
+            ct.connect("localhost:3306", 30000);
         }
     }
 
@@ -26,7 +26,7 @@ public class App {
     public void runApp() throws SQLException {
         // Instantiate the SQL database connection object.
         Connection ct = new Connection();
-        ct.connect("localhost:3306", 30000);
+        ct.connect("localhost:33060", 30000);
 
         /**
          * Include Instantiate the respective reports object (Country, City, Population, Language and Specific Population)

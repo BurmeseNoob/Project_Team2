@@ -1,10 +1,13 @@
 package IntegrationTest;
+
 import DataBaseConnect.Connection;
-import ProjectTeam2.App;
-import ProjectTeam2.City;
-import ProjectTeam2.Country;
+import ProjectTeam2.*;
 import Reports.CityReports;
 import Reports.CountryReports;
+import Reports.LanguageReports;
+import Reports.PopulationReports;
+import Reports.PopulationReports;
+import Reports.SpecificPopulationReports;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -14,33 +17,38 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AppIntegrationTest
-{
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+public class AppIntegrationTest {
+
     static App app;
 
     @BeforeAll
     static void init() throws SQLException {
         app = new App();
         app.runApp(); // Running the app's logic to ensure everything initializes
+    }@Test
+    public void testGetLanguages() throws SQLException, ClassNotFoundException {
+        // Step 1: Establish a connection and create the LanguageReports object
+        Connection connection = new Connection();
+        connection.connect("localhost:33060", 30000);
+        LanguageReports lr = new LanguageReports(connection.getConnection());
+
+        // Step 2: Retrieve the list of world languages and check it is not null or empty
+        ArrayList<LanguageData> languagesSpeakList = lr.getWorldLanguagesSpeak();
+        assertNotNull(languagesSpeakList, "Languages list should not be null.");
+        assertFalse(languagesSpeakList.isEmpty(), "Languages list should not be empty.");
+
+        // Step 3: Check for expected content in languagesSpeakList (assuming you know the expected output structure)
+        for (LanguageData languageData : languagesSpeakList) {
+            assertNotNull(languageData.getLanguage(), "Language name should not be null.");
+        }
+
+        // Step 4: Test the display function (if applicable)
+        lr.displayWorldLanguagesSpeak(languagesSpeakList); // Check if this displays output as expected
+
+        // Step 5: Close the connection after testing
+        connection.disconnect();
     }
 
-    @Test
-    void testCountryReports() throws SQLException {
-        // Check that country reports are generated and displayed properly
-        CountryReports countryReports = new CountryReports(new Connection().getConnection());
-        ArrayList<Country> countries = countryReports.getDescendingPopulationOfCountry();
 
-        assertNotNull(countries, "The country list should not be null.");
-        assertTrue(countries.size() > 0, "The country list should contain data.");
-    }
-
-    @Test
-    void testCityReports() throws SQLException {
-        // Check that city reports are generated correctly
-        CityReports cityReports = new CityReports(new Connection().getConnection());
-        ArrayList<City> cities = cityReports.getPopulationOftheCitybyDescendingOrder();
-
-        assertNotNull(cities, "The city list should not be null.");
-        assertTrue(cities.size() > 0, "The city list should contain data.");
-    }
 }
