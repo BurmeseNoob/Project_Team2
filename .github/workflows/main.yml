@@ -17,7 +17,7 @@ jobs:
         run: mvn -Dtest=UnitTest.SpecificPopulationReportTest test -DfailIfNoTests=false
 
   build:
-    name: Build and Start Using docker-compose
+    name: Build and Start Using docker-compose and run app
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
