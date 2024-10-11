@@ -43,7 +43,7 @@
   <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
   <li>Wai Yan Phone Myint - <strong>Code Assistant</strong></li>
   <li>Toe Aung Lynn - <strong>System Tester</strong></li>
-  <li>Saw Eh Blut Lel Bwe - <strong>Project Analyst</strong></li>
+  <li>Saw EhBlut Lel Bwe - <strong>Project Analyst</strong></li>
 </ul>
 
 <h2 align="center">🖥️ Project Languages</h2>
