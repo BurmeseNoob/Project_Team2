@@ -1,32 +1,40 @@
-### **USE CASE 5: Producing the Top N values of the population of the country in a Continent by Descending order, N will be provided by user**
+#### **USE CASE 5: Retrieving Top N Populated Countries in a Continent**
+#### **CHARACTERISTIC INFORMATION**
 
-- **Goal in Context**: Focus on the top **N** populated countries in a continent to inform regional strategy.
-- **Scope**: Gather and organize population data for the specified continent.
-- **Level**: High-level task supporting regional decision-making.
-- **Success End Condition**: Report accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst / Developer
-- **Trigger**: Request for top **N** countries in a continent.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated countries in a continent to target high-population regions.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. **N** and continent defined.
-3. Data sources accessed.
-4. Data extracted.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with insights.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Scope**
+Organization
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative data sources or informs project manager.
-- **Data inconsistencies**: Analyst cross-references the data.
+#### **Level**
+Primary task
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Preconditions**
+The system accesses population data for countries in the specified continent.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Success End Condition**
+The system returns the top N populated countries in a continent.
+
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst sets N for top populated countries.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves continent-specific data.
+The system sorts countries by population and displays the top N.
+#### **EXTENSIONS**
+If N exceeds the number of countries in the continent, the system returns results up to the total available.
+If population data for a specific country is missing, the system will skip it and proceed with the remaining countries.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0

@@ -1,34 +1,41 @@
-### **USE CASE 6: Producing the Top N values of the population of the country in a Region by Descending order, N will be provided by user**
+#### **USE CASE 6: Retrieving Top N Populated Countries in a Region**
+#### **CHARACTERISTIC INFORMATION**
 
-- **Goal in Context**: Focus on the top **N** populated countries in a region to inform regional strategy.
-- **Scope**: Gather and organize population data for a specific region.
-- **Level**: High-level task supporting regional decision-making.
-- **Success End Condition**: Report accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst / Developer
-- **Trigger**: Request for top **N** countries in a region.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated countries in a region to strategize resource allocation.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. **N** and region defined.
-3. Data sources accessed.
-4. Data extracted.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with insights.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Scope**
+Organization
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs project manager.
-- **Data inconsistencies**: Analyst cross-references the data.
+#### **Level**
+Primary task
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Preconditions**
+The system accesses population data for countries within the specified region.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Success End Condition**
+The system returns the top N populated countries in a region.
 
+#### **Failed End Condition**
+The system shows a “no result” message.
 
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst inputs N to filter top populated countries.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for the region.
+The system sorts and shows the top N countries by population.
+
+#### **EXTENSIONS**
+If N exceeds the number of countries in the specified region, the system limits results to those available.
+If the region contains countries with missing data, the system skips those entries.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0

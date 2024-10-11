@@ -1,43 +1,41 @@
-### USE CASE 20: **Top N Populated Capital Cities in the World**
+#### **USE CASE 20: Retrieving Top N Populated Capital Cities in the World**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Identify the largest **N** capital cities globally to inform decisions on market analysis, urban development, and resource allocation.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated capital cities in the world, where N is defined by the user, to analyze major global capitals.
 
-#### **Scope**:
-Analyze population data for global capital cities, rank the top **N**, and generate a report with insights into key urban centers.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for global strategy and planning.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Defined value of **N**.
+#### **Preconditions**
+The system accesses population data for all capital cities globally.
 
-#### **Success End Condition**:
-A ranked report of the top **N** capital cities is generated and accepted.
+#### **Success End Condition**
+The system displays the top N populated capital cities.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from senior management or strategists.
+#### **Trigger**
+The analyst sets N to analyze top populated capitals globally.
 
-#### **Main Success Scenario**:
-1. Request for the top **N** capital cities initiated.
-2. Analyst clarifies **N** and additional data points.
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for global capital cities.
+The system sorts and shows the top N capitals by population.
+#### **EXTENSIONS**
+If N exceeds the number of capital cities, the system limits results to the available total.
+If some capital cities lack data, they are omitted from the results.
 
-#### **Extensions**:
-- Some city data is unavailable or outdated.
-- Data inconsistencies detected during validation.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**

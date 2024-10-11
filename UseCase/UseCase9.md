@@ -1,44 +1,41 @@
-### USE CASE 9: **Produce Report on All Cities in a Region Organized by Population**
+#### **USE CASE 9: Organizing Cities in a Region by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Support regional planning and market analysis by providing city-level population data for decision-making.
+#### **Goal in Context**
+As a data analyst, I can organize cities in a region by population size to analyze the distribution of urban areas.
 
-#### **Scope**:
-Collect and sort data for cities in a specific region, presenting a ranked report.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level task contributing to regional strategy.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Reliable, up-to-date population data.
-- Defined regions.
+#### **Preconditions**
+The system accesses population data for cities in the region.
 
-#### **Success End Condition**:
-A ranked report on cities by population is submitted and accepted.
+#### **Success End Condition**
+The system lists cities in the region from largest to smallest population.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from management or planners to analyze city-level data for a region.
+#### **Trigger**
+The analyst seeks information on city populations within a region.
 
-#### **Main Success Scenario**:
-1. Request for region-specific population report.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Data extraction, validation, and sorting.
-5. Report generated, reviewed, and submitted.
-6. Feedback is incorporated.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves city data for the specified region.
+The system organizes cities by population in descending order.
+The analyst assesses urban density patterns in the region.
+#### **EXTENSIONS**
+If data for certain cities in the region is missing, the system notifies the analyst and proceeds with available data.
+If multiple regions are selected, the system prompts for clarification or applies all selections.
 
-#### **Extensions**:
-- **Incomplete data**: Search for alternative sources or tell project manager.
-- **Inconsistencies**: Clarify with data providers.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

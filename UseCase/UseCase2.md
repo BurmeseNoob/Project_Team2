@@ -1,32 +1,42 @@
-### **USE CASE 2: Producing the report of the population of the countries in a continent order by descending**
+#### **USE CASE 2: Organizing Countries in a Continent by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-- **Goal in Context**: Analyze population trends within a continent to inform regional strategy.
-- **Scope**: Data collection and organization of population data for countries within a continent.
-- **Level**: High-level task contributing to regional decision-making.
-- **Success End Condition**: Accurate report accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst / Developer.
-- **Trigger**: Request for continental population data.
+#### **Goal in Context**
+As a data analyst, I can organize all countries in a continent by largest to smallest population to evaluate the distribution of populations within continents.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. Requirements clarified.
-3. Data sources accessed.
-4. Data extracted for the continent.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with trends.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Scope**
+Organization
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs project manager.
-- **Data inconsistencies**: Analyst cross-references other sources.
+#### **Level**
+Primary task
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Preconditions**
+The system accesses population data for each country within the specified continent.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Success End Condition**
+The system generates a list of countries in a continent ordered by population.
+
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst requires insight into population distribution within a continent.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects population data within the specified continent.
+The system sorts countries by population size.
+The data analyst reviews the list to understand distribution.
+#### **EXTENSIONS**
+If population data for certain countries in the continent is missing, the system notifies the analyst and continues with available entries.
+If the analyst specifies multiple continents, the system prompts for a single selection to proceed..
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0
+

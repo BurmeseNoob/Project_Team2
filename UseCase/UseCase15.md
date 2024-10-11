@@ -1,43 +1,40 @@
-### USE CASE 15: **Top N Populated Cities in a Country**
+#### **USE CASE 15: Retrieving Top N Populated Cities in a Country**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Identify the largest **N** cities by population in a country to inform decisions on economic development, resource distribution, and infrastructure planning.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated cities in a country, where N is specified by the user, to focus on highly populated urban centers in the country.
 
-#### **Scope**:
-Analyze population data for cities within a specific country, validate the data, and generate a report highlighting the top **N** cities.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for national strategy and decision-making.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Defined value of **N** and country.
+#### **Preconditions**
+The system has access to population data for cities within the specified country.
 
-#### **Success End Condition**:
-A report is generated with the top **N** cities and accepted by stakeholders.
+#### **Success End Condition**
+The system displays the top N populated cities in the country.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from senior management or planners.
+#### **Trigger**
+The analyst sets N to explore top cities in a country.
 
-#### **Main Success Scenario**:
-1. Request for top **N** cities initiated.
-2. Analyst clarifies requirements (N, country, additional metrics).
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves city population data for the country.
+The system sorts and shows the top N cities by population.
+#### **EXTENSIONS**
+If N exceeds the number of cities in the country, the system returns results up to the total available.
+If some cities lack data, the system proceeds with the remaining cities.
 
-#### **Extensions**:
-- Data for some cities is unavailable or outdated.
-- Inconsistencies found during validation.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

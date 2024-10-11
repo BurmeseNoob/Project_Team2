@@ -1,32 +1,40 @@
-### **USE CASE 4: Producing the Top N values of the population of the country by Descending order, N will be provided by user**
+#### **USE CASE 4: Retrieving Top N Populated Countries in the World**
+#### **CHARACTERISTIC INFORMATION**
 
-- **Goal in Context**: Provide data on the top **N** most populated countries to support global decisions.
-- **Scope**: Data collection and sorting for the top **N** countries by population.
-- **Level**: High-level task supporting strategic decision-making.
-- **Success End Condition**: Report accepted by stakeholders.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst/ Developer
-- **Trigger**: Request for top **N** populated countries.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated countries in the world, where N is defined by the user, to focus on high-density populations.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. **N** defined.
-3. Data sources accessed.
-4. Data extracted.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with visualizations.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Scope**
+Organization
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Alternative data sources found, or project manager informed.
-- **Data inconsistencies**: Analyst cross-references data sources.
+#### **Level**
+Primary task
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Preconditions**
+The system accesses global population data for each country.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Success End Condition**
+The system returns the top N populated countries globally.
+
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst sets N to filter top populated countries.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves global country data.
+The system sorts and displays the top N populated countries.
+#### **EXTENSIONS**
+If N exceeds the number of available countries, the system limits the results to the total number of countries and informs the analyst.
+If no data is available for a specific country, it is skipped, and the system proceeds with available data.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0

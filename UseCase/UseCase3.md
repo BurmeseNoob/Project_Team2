@@ -1,33 +1,43 @@
-### **USE CASE 2: Producing the report of the population of the countries in a region order by descending**
+#### **USE CASE 3: Organizing Countries in a Region by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
+#### **Goal in Context**
+As a data analyst, I can organize all countries in a region by population size to understand population concentration.
 
-- **Goal in Context**: Evaluate population data within a specific region for market/resource allocation.
-- **Scope**: Data collection and organization for countries in a region.
-- **Level**: High-level task supporting regional decisions.
-- **Success End Condition**: Report is complete and accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst/ Developer
-- **Trigger**: Request for regional population data.
+#### **Scope**
+Organization
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. Requirements clarified.
-3. Data sources accessed.
-4. Data extracted for the region.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with insights.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+#### **Level**
+Primary task
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Analyst finds alternative sources or informs project manager.
-- **Data inconsistencies**: Data cross-referenced with other sources.
+#### **Preconditions**
+The system accesses population data for each country in the region.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Success End Condition**
+The system generates a list of countries within a region organized by population.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The analyst evaluates the regional population dynamics.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects data for countries within the region.
+The system organizes countries in descending population order.
+The analyst uses data for regional analysis.
+
+#### **EXTENSIONS**
+If certain countries in the specified region lack data, the system proceeds with available data and flags missing entries.
+If multiple regions are selected, the system requests clarification or allows sorting across regions, noting the regions alongside country names.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0
+

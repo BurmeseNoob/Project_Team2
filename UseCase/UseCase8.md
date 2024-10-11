@@ -1,40 +1,42 @@
-### USE CASE 8: **Producing the report of the population of the City in a Continent by Descending order**
+#### **USE CASE 8: Organizing Cities in a Continent by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Analyze city-level data in a continent to inform decisions
+#### **Goal in Context**
+As a data analyst, I can organize all cities in a continent by largest to smallest population, to examine urban population density trends across a continent.
 
-#### **Scope**:
-Gather and sort population data for cities in a continent, presenting a report ranked by population size.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level user goal contributing to regional planning and strategy.
+#### **Level**
+Primary task
 
-#### **Success End Condition**:
-A complete report, ranked by population, is submitted and accepted for decision-making.
+#### **Preconditions**
+The system accesses population data for cities within the specified continent.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report, preventing analysis.
+#### **Success End Condition**
+The system generates an ordered list of cities by population for the continent.
 
-#### **Primary Actor**:
-Data Analyst / Developer
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Trigger**:
-A request from management or planners to analyze city-level population data within a continent.
+#### **Primary Actor**
+Data Analyst
 
-#### **Main Success Scenario**:
-1. Request for a continent-specific population report.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Analyst extracts, validates, and sorts data.
-5. Report is generated, reviewed, and submitted.
-6. Feedback is incorporated if needed.
+#### **Trigger**
+The analyst needs an overview of urban population within a continent.
 
-#### **Extensions**:
-- **Unavailable data**: Find alternative sources or notify project manager.
-- **Inconsistent data**: Clarify with data providers.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves city data within the continent.
+The system sorts cities by descending population.
+The analyst reviews data for continental urban planning.
+#### **EXTENSIONS**
+If population data for some cities in the continent is missing, the system proceeds with available data.
+If multiple continents are selected, the system prompts for a single selection.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SUB-VARIATIONS**
+None.
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
+

@@ -1,4 +1,4 @@
-FROM openjdk:17
-COPY ./target/Project_Team2-0.1.0.3-jar-with-dependencies.jar /tmp
+FROM openjdk:latest
+COPY ./target/devopsethods.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java","-jar","Project_Team2-0.1.0.3-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "devopsethods.jar", "db:3306", "30000"]

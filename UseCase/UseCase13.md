@@ -1,43 +1,41 @@
-### USE CASE 13: **Produce Report on the Top N Populated Cities in a Continent**
+#### **USE CASE 13: Retrieving Top N Populated Cities in a Continent**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Identify the largest cities by population within a continent to inform regional planning, market research, or infrastructure decisions.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated cities in a continent, where N is defined by the user, for strategic planning.
 
-#### **Scope**:
-Collect and sort data for cities in the specified continent, producing a ranked report for the top **N** cities.
+#### **Scope**
+Organization
 
-#### **Level**:
-High-level task contributing to regional strategy.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- **N** (e.g., top 10, top 20) and a continent.
+#### **Preconditions**
+The system accesses city population data for the continent.
 
-#### **Success End Condition**:
-A report listing the top **N** cities by population is submitted and accepted.
+#### **Success End Condition**
+The system returns the top N populated cities on the continent.
 
-#### **Failed End Condition**:
-Incomplete, inaccurate, or delayed report.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from management or planners to analyze the largest cities in a continent.
+#### **Trigger**
+The analyst sets N to examine major cities in the continent.
 
-#### **Main Success Scenario**:
-1. Request for top **N** cities in a continent.
-2. Analyst gathers requirements.
-3. Access to data sources confirmed.
-4. Data extracted, validated, and sorted.
-5. Report generated, reviewed, and submitted.
-6. Feedback incorporated.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects continent-specific data.
+The system displays the top N populated cities.
+#### **EXTENSIONS**
+If N exceeds the number of cities available in the continent, the system returns the available total.
+If specific cities lack population data, the system skips them.
 
-#### **Extensions**:
-- **Unavailable data**: Seek alternatives or notify stakeholders.
-- **Inconsistent data**: Clarify with data providers.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**

@@ -1,33 +1,42 @@
-#### **USE CASE 1: Producing the report about the population of the country in the world order by descending**
+#### **USE CASE 1: Organizing Countries in the World by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**u
 
-- **Goal in Context**: Provide a report about Populations of the country largest to smallest.
-- **Scope**: Data gathering, analysis, and presentation of global population data.
-- **Level**: High-level task supporting strategic decision-making.
-- **Success End Condition**: Report is accurate, timely, and accepted by project manager.
-- **Failed End Condition**: Report is incomplete, inaccurate, or delayed.
-- **Primary Actor**: Data Analyst / .
-- **Trigger**: Request from senior management for population data.
+#### **Goal in Context**
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request initiated.
-2. Requirements clarified.
-3. Data sources accessed (world db and tables).
-4. Data extracted.
-5. Data validated and cleaned.
-6. Data sorted by population.
-7. Report generated with visualizations.
-8. Report reviewed.
-9. Report submitted.
-10. Feedback incorporated.
-11. Report finalized.
+As a data analyst, I can organize all the countries in the world by largest to smallest population to study global population distribution patterns.
 
-#### **EXTENSIONS**:
-- **Data unavailable**: Alternative sources are found, or project manager are informed of delays.
-- **Data inconsistencies**: Analyst contacts the provider or cross-references other sources.
+#### **Scope**
+Organization
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **Level**
+Primary task
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.3**
+#### **Preconditions**
+The system accesses the global population data for each country.
 
+#### **Success End Condition**
+The system generates a list of countries from the largest to smallest population.
+
+#### **Failed End Condition**
+The system shows a “no result” message.
+
+#### **Primary Actor**
+Data Analyst
+
+#### **Trigger**
+The data analyst needs a global population distribution overview.
+
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects country population.
+The system sorts countries by population size in descending order.
+The system outputs the country list ordered by population.
+#### **EXTENSIONS**
+If population data for certain countries is missing or incomplete, the system will proceed with available data and notify the analyst of the missing entries.
+If there’s a tie in population, the system sorts alphabetically by country name as a secondary criterion.
+
+#### **SUB-VARIATIONS**
+None.
+
+#### **SCHEDULE**
+DUE DATE : Release 1.0

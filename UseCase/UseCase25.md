@@ -1,38 +1,41 @@
-### **USE CASE 25: Generate Report on the Total Population of the World**
+#### **USE CASE 25: Population Analysis of People, People in Cities, and People not in Cities in Each Country**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-Provide a reliable and up-to-date summary of global population data for organizational use.
+As a data analyst, I can evaluate the population distribution within each country to understand demographic structures.
 
 #### **Scope**
-Compile the most recent global population data from trusted sources.
+Organization
 
 #### **Level**
-User-goal level; supports access to global population statistics.
+Primary task
+
+#### **Preconditions**
+The system has access to population data for each country.
 
 #### **Success End Condition**
-The report with the total global population is generated and accepted.
+The system generates a report detailing total population for each country.
 
 #### **Failed End Condition**
-Incorrect or incomplete report.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management for quick access to global population data.
+The analyst requires insights into demographic trends within individual countries.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Analyst gathers and validates global population data.
-3. A concise report is generated.
-4. Reviewed and submitted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for each country.
+The system calculates and displays total populations.
+#### **EXTENSIONS**
+If certain countries lack data, the system uses available information and notifies the analyst.
+The system allows filters (e.g., urban/rural) for more detailed analysis.
 
-#### **Extensions**
-- Data unavailable or outdated.
-- Conflicting data from sources.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

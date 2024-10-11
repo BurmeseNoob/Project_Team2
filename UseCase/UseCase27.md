@@ -1,38 +1,40 @@
-### **USE CASE 27: Generate Report on the Population of a Region**
+#### **USE CASE 27: Retrieving the Population of a Continent**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-Provide a report on the population of a specific region for strategic and demographic analysis.
+As a data analyst, I can retrieve a continent’s total population to analyze demographic density by continent.
 
 #### **Scope**
-Gather and analyze population data for a specified region, optionally including country or sub-region breakdowns.
+Organization
 
 #### **Level**
-User-goal level for regional strategy and planning.
+Primary task
+
+#### **Preconditions**
+The system has access to population data for the specified continent.
 
 #### **Success End Condition**
-A population report for the region is generated and accepted.
+The system displays the population total for the continent.
 
 #### **Failed End Condition**
-Incomplete or inaccurate report.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management or planners for regional population data.
+The analyst needs an overview of the continent’s demographic size.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Data gathered and validated for the region.
-3. Report generated, optionally with country breakdowns.
-4. Reviewed and submitted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for the continent.
+The system displays the total population for the selected continent.
+#### **EXTENSIONS**
+If some countries in the continent lack data, the system estimates the total and flags missing entries.
+The system prompts if multiple continents are selected.
 
-#### **Extensions**
-- Data unavailable or outdated for sub-regions.
-- Inconsistent population figures.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

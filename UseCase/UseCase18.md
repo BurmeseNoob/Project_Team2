@@ -1,43 +1,40 @@
-### USE CASE 18: **All Capital Cities in a Continent by Population**
+#### **USE CASE 18: Organizing Capital Cities in a Continent by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Understand population trends in capital cities across a continent to support regional market analysis and infrastructure planning.
+#### **Goal in Context**
+As a data analyst, I can organize capital cities in a continent by population size to study the distribution of population among continental capitals.
 
-#### **Scope**:
-Analyze population data for all capital cities within a continent, rank them by size, and generate a report with insights into regional population trends.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for regional planning and strategy.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Clarification of additional data requirements.
+#### **Preconditions**
+The system accesses population data for capital cities in the continent.
 
-#### **Success End Condition**:
-A ranked report of all capital cities in the continent is generated and accepted.
+#### **Success End Condition**
+The system generates an ordered list of capital cities by population for the continent.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from senior management or regional planners.
+#### **Trigger**
+The analyst seeks insights into population trends among capital cities.
 
-#### **Main Success Scenario**:
-1. Request for a continent-specific capital city ranking initiated.
-2. Analyst clarifies additional data points.
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for capital cities in the continent.
+The system sorts cities by population in descending order.
+#### **EXTENSIONS**
+If data for certain capital cities is missing, they are omitted, and the system notifies the analyst.
+If multiple continents are selected, the system requests clarification or applies all selections.
 
-#### **Extensions**:
-- Some capital city data is unavailable or outdated.
-- Data inconsistencies detected during validation.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

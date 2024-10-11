@@ -3,10 +3,11 @@ services:
   # Application Dockerfile is in same folder which is .
   app:
     build: .
+    command: ["java","ProjectTeam2.App"]
 
   # db is is db folder
   db:
     build: db/.
     restart: always
     ports:
-      - "33061:3307"
+      - "33060:3306"

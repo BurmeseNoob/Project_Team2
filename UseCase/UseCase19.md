@@ -1,43 +1,41 @@
-### USE CASE 19: **All Capital Cities in a Region by Population**
+#### **USE CASE 19: Organizing Capital Cities in a Region by Largest Population to Smallest**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Analyze population distribution among capital cities in a region to support policy-making, market analysis, and planning.
+#### **Goal in Context**
+As a data analyst, I can organize capital cities in a region by population size to focus on the region's most populous capitals.
 
-#### **Scope**:
-Analyze population data for capital cities within a specific region, rank them by size, and generate a report with insights into regional trends.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for regional strategy and decision-making.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Clarification of additional data requirements.
+#### **Preconditions**
+The system accesses population data for capital cities in the region.
 
-#### **Success End Condition**:
-A ranked report of capital cities in the region is generated and accepted.
+#### **Success End Condition**
+The system generates a list of capital cities in descending order of population.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from senior management or regional planners.
+#### **Trigger**
+The analyst evaluates capital city populations in the region.
 
-#### **Main Success Scenario**:
-1. Request for a regional capital city ranking initiated.
-2. Analyst clarifies additional data points.
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves data for capital cities in the region.
+The system sorts cities by population size.
+#### **EXTENSIONS**
+If data for specific capitals in the region is missing, they are omitted, and the analyst is notified.
+If multiple regions are selected, the system prompts for a single region or uses all selections.
 
-#### **Extensions**:
-- Some capital city data is unavailable or outdated.
-- Data inconsistencies detected during validation.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**

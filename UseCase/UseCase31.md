@@ -1,42 +1,41 @@
-## 31. **Generate Report on the Number of People Who Speak Chinese**
+#### **USE CASE 31: Retrieving the Population of a City**
+#### **CHARACTERISTIC INFORMATION**
 
-### Goal in Context:
-Provide a global report on the number of Chinese speakers (native and non-native) to support strategic planning and outreach programs.
+#### **Goal in Context**
+As a data analyst, I can retrieve the population of a city to evaluate its demographic size.
 
-### Scope:
-Gather, validate, and generate a report on the number of Chinese speakers worldwide, including their percentage of the global population.
+#### **Scope**
+Organization
 
-### Level:
-User-goal level (supports global planning and decision-making).
+#### **Level**
+Primary task
 
+#### **Preconditions**
+The system has access to population data for the specified city.
 
-### Success End Condition:
-A complete, accurate report on Chinese speakers is generated and accepted by stakeholders.
+#### **Success End Condition**
+The system displays the population total for the city.
 
-### Failed End Condition:
-Incomplete or inaccurate report, or missed deadlines.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-### Primary Actor:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-### Trigger:
-A request for data on Chinese speakers globally from senior management or strategy teams.
+#### **Trigger**
+The analyst seeks data on the city’s demographic size.
 
-### Main Success Scenario:
-1. Request initiated.
-2. Analyst clarifies requirements (e.g., native/non-native breakdowns).
-3. Access to reliable data confirmed.
-4. Data extraction and validation.
-5. Report generated with visualizations (if needed).
-6. Report reviewed and submitted to stakeholders.
-7. Feedback incorporated, if necessary.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for the city.
+The system displays the population total of the city.
+#### **EXTENSIONS**
+If population data is missing for a city, the system flags the missing data and proceeds with available information.
+The system allows filters (e.g., by neighborhood) if more granularity is required.
 
-### Extensions:
-- **Unavailable data**: Analyst identifies alternative sources or flags limitations.
-- **Data inconsistencies**: Analyst contacts data providers for clarification.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
 
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**

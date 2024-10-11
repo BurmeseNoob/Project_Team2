@@ -1,53 +1,41 @@
-### 21. USE CASE: **Generate Report on the Top N Populated Non-Capital Cities in a Region**
+#### **USE CASE 21: Retrieving Top N Populated Capital Cities in a Continent**
+#### **CHARACTERISTIC INFORMATION**
 
----
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated capital cities in a continent, where N is provided by the user, to analyze the largest capitals on the continent.
 
-#### **Goal in Context**:
-The organization requires a report on the top **N** most populated non-capital cities in a region to support regional planning and market research.
+#### **Scope**
+Organization
 
-#### **Scope**:
-Collect population data for non-capital cities in the specified region, rank the top **N**, and generate a report.
+#### **Level**
+Primary task
 
-#### **Level**:
-User-goal level (regional market analysis).
+#### **Preconditions**
+The system accesses population data for capital cities in the specified continent.
 
-#### **Preconditions**:
-- User-defined **N**.
+#### **Success End Condition**
+The system displays the top N populated capital cities in the continent.
 
-#### **Success End Condition**:
-The report successfully ranks the top **N** non-capital cities and is accepted by stakeholders.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Failed End Condition**:
-The report is inaccurate, incomplete, or delayed.
+#### **Primary Actor**
+Data Analyst
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Trigger**
+The analyst defines N to study major capitals in the continent.
 
-#### **Trigger**:
-A request from senior management for a report on top **N** non-capital cities in a region.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system selects data for continent-specific capital cities.
+The system sorts and displays the top N capitals.
 
----
+#### **EXTENSIONS**
+If N exceeds the number of capital cities in the continent, the system returns the total available.
+If some cities are missing data, they are skipped.
 
-#### **MAIN SUCCESS SCENARIO**:
-1. Request is initiated.
-2. Analyst clarifies **N** and requirements.
-3. Access to data is ensured.
-4. Data is extracted.
-5. Data is validated.
-6. Cities are ranked.
-7. Report is generated and reviewed.
-8. Report is submitted.
-9. Feedback is incorporated if necessary.
-10. The report is accepted.
+#### **SUB-VARIATIONS**
+None.
 
----
-
-#### **EXTENSIONS**:
-- **3a**: Data is unavailable for some cities.
-- **5a**: Data inconsistencies.
-
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

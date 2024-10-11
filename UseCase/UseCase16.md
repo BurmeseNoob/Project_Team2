@@ -1,43 +1,40 @@
-### USE CASE 16: **Top N Populated Cities in a District**
+#### **USE CASE 16: Retrieving Top N Populated Cities in a District**
+#### **CHARACTERISTIC INFORMATION**
 
-#### **Goal in Context**:
-Provide detailed local population data on the largest cities in a district for decision-making in urban planning and resource allocation.
+#### **Goal in Context**
+As a data analyst, I can retrieve the top N populated cities in a district to analyze localized population trends.
 
-#### **Scope**:
-Analyze population data for cities within a district to produce a report on the top **N** cities.
+#### **Scope**
+Organization
 
-#### **Level**:
-User-goal level for localized planning and governance.
+#### **Level**
+Primary task
 
-#### **Preconditions**:
-- Defined value of **N** and district of interest.
+#### **Preconditions**
+The system accesses population data for cities within the specified district.
 
-#### **Success End Condition**:
-A report on the top **N** district cities is generated and accepted.
+#### **Success End Condition**
+The system displays the top N populated cities in the district.
 
-#### **Failed End Condition**:
-The report is incomplete, inaccurate, or delayed.
+#### **Failed End Condition**
+The system shows a “no result” message.
 
-#### **Primary Actor**:
-Data Analyst.
+#### **Primary Actor**
+Data Analyst
 
-#### **Trigger**:
-Request from local government or planners.
+#### **Trigger**
+The analyst sets N to focus on local population analysis.
 
-#### **Main Success Scenario**:
-1. Request for top **N** cities in a district initiated.
-2. Analyst clarifies requirements (N, district, additional metrics).
-3. Data is sourced, validated, and sorted.
-4. Report generated and submitted for review.
-5. Feedback incorporated if necessary.
-6. Final report accepted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves district-specific data.
+The system sorts and displays the top N cities by population.
+#### **EXTENSIONS**
+If N exceeds the number of cities in the district, the system returns results up to the available number.
+If population data for certain cities is missing, the system skips them.
 
-#### **Extensions**:
-- Data for some cities is missing or outdated.
-- Inconsistencies found in data.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.4**
+#### **SCHEDULE**
+DUE DATE : Release 1.0

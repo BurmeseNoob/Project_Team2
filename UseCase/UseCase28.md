@@ -1,39 +1,40 @@
-### **USE CASE 28: Generate Report on Country Population**
+#### **USE CASE 28: Retrieving the Population of a Region**
+#### **CHARACTERISTIC INFORMATION**
 
 #### **Goal in Context**
-Provide a reliable report on the population of a specific country for planning or analysis.
+As a data analyst, I can retrieve the total population of a specific region to understand its demographic density.
 
 #### **Scope**
-Gather and validate population data for a specific country, optionally including sub-region breakdowns.
+Organization
 
 #### **Level**
-User-goal level for country-level strategy and planning.
+Primary task
 
+#### **Preconditions**
+The system has access to population data for the specified region.
 
 #### **Success End Condition**
-The report is generated and accepted.
+The system displays the total population for the region.
 
 #### **Failed End Condition**
-Incomplete or inaccurate report.
+The system shows a “no result” message.
 
 #### **Primary Actor**
-Data Analyst.
+Data Analyst
 
 #### **Trigger**
-Request from senior management for country population data.
+The analyst needs information on the population size of a particular region.
 
-#### **Main Success Scenario**
-1. Request initiated.
-2. Data gathered and validated for the country.
-3. Optional sub-region breakdowns included.
-4. Report generated, reviewed, and submitted.
+#### **MAIN SUCCESS SCENARIO**
+Data analysis request the report.
+The system retrieves population data for the specified region.
+The system displays the total population for the region.
+#### **EXTENSIONS**
+If population data for some countries within the region is missing, the system uses the available data and flags missing entries.
+The system prompts for clarification if multiple regions are selected.
 
-#### **Extensions**
-- Data unavailable or conflicting.
-- Feedback requires additional metrics.
+#### **SUB-VARIATIONS**
+None.
 
-#### **SUB-VARIATIONS**:
-- **None**
-
-#### **SCHEDULE**:
-- **DUE DATE: Release 0.1.0.5**
+#### **SCHEDULE**
+DUE DATE : Release 1.0
