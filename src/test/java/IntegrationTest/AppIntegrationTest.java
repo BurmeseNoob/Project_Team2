@@ -6,11 +6,8 @@ import Reports.CityReports;
 import Reports.CountryReports;
 import Reports.LanguageReports;
 import Reports.PopulationReports;
-import Reports.PopulationReports;
 import Reports.SpecificPopulationReports;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,16 +18,26 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AppIntegrationTest {
 
     static App app;
+    static Connection connection;  // Reusable connection instance
 
     @BeforeAll
-    static void init() throws SQLException {
+    public void setUp() throws SQLException {
+        // Initialize the app and set up the database connection once for all tests
         app = new App();
-        app.runApp(); // Running the app's logic to ensure everything initializes
-    }@Test
-    public void testGetLanguages() throws SQLException, ClassNotFoundException {
-        // Step 1: Establish a connection and create the LanguageReports object
-        Connection connection = new Connection();
-        connection.connect("localhost:33060", 30000);
+        app.runApp();
+        connection = new Connection();
+        connection.connect("localhost:33060", 30000);  // Connect once for reuse
+    }
+
+    @AfterAll
+    public void tearDown() throws SQLException {
+        // Disconnect after all tests are completed
+        connection.disconnect();
+    }
+
+    @Test
+    public void testGetLanguages() throws SQLException {
+        // Reuse the established connection for LanguageReports
         LanguageReports lr = new LanguageReports(connection.getConnection());
 
         // Step 2: Retrieve the list of world languages and check it is not null or empty
@@ -38,22 +45,18 @@ public class AppIntegrationTest {
         assertNotNull(languagesSpeakList, "Languages list should not be null.");
         assertFalse(languagesSpeakList.isEmpty(), "Languages list should not be empty.");
 
-        // Step 3: Check for expected content in languagesSpeakList (assuming you know the expected output structure)
+        // Check for expected content in languagesSpeakList
         for (LanguageData languageData : languagesSpeakList) {
             assertNotNull(languageData.getLanguage(), "Language name should not be null.");
         }
 
         // Step 4: Test the display function (if applicable)
-        lr.displayWorldLanguagesSpeak(languagesSpeakList); // Check if this displays output as expected
-
-        // Step 5: Close the connection after testing
-        connection.disconnect();
+        lr.displayWorldLanguagesSpeak(languagesSpeakList);
     }
+
     @Test
-    public void testRunCountryReports() throws SQLException, ClassNotFoundException {
-        // Step 1: Establish a connection and create the CountryReports object
-        Connection connection = new Connection();
-        connection.connect("localhost:33060", 30000);
+    public void testRunCountryReports() throws SQLException {
+        // Reuse the established connection for CountryReports
         CountryReports cr = new CountryReports(connection.getConnection());
 
         // Step 2: Test the descending population of countries
@@ -78,19 +81,15 @@ public class AppIntegrationTest {
         assertFalse(regions.isEmpty(), "Regions list should not be empty.");
 
         // Step 5: Test user input for top N populated countries
-        int N = 10; // Example value for testing
+        int N = 10;  // Example value for testing
         cr.displayTopPouplateCountrybyUser(N);
         cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
         cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
-
-        // Step 6: Close the connection after testing
-        connection.disconnect();
     }
+
     @Test
-    public void testRunCityReports() throws SQLException, ClassNotFoundException {
-        // Step 1: Establish a connection and create the CityReports object
-        Connection connection = new Connection();
-        connection.connect("localhost:33060", 30000);
+    public void testRunCityReports() throws SQLException {
+        // Reuse the established connection for CityReports
         CityReports cy = new CityReports(connection.getConnection());
 
         // Step 2: Test retrieving and displaying cities by descending population
@@ -103,7 +102,7 @@ public class AppIntegrationTest {
             assertTrue(allCities.get(i - 1).getPopulation() >= allCities.get(i).getPopulation(),
                     "City list should be in descending order of population.");
         }
-        cy.cityReportFormat(allCities); // Assumes this displays the city report in a proper format
+        cy.cityReportFormat(allCities);
 
         // Step 3: Test retrieving distinct continents
         ArrayList<String> distinctContinents = cy.getDistinctContinent();
@@ -130,7 +129,7 @@ public class AppIntegrationTest {
         cy.getPopulationOfthecitybyDistrict(distinctDistricts);
 
         // Step 7: Test top N cities by population
-        int N = 10; // Example value for testing
+        int N = 10;
         ArrayList<City> topCities = cy.getPopulationOfthecity(N);
         assertNotNull(topCities, "Top cities list should not be null.");
         assertFalse(topCities.isEmpty(), "Top cities list should not be empty.");
@@ -141,20 +140,16 @@ public class AppIntegrationTest {
         cy.getPopulationOftheCityByRegionTopN(N);
         cy.getPopulationOftheCityByCountryTopN(N);
         cy.getPopulationOftheCityByDistrictTopN(N);
-
-        // Step 9: Close the connection after testing
-        connection.disconnect();
     }
+
     @Test
-    public void testRunPopulationReports() throws SQLException, ClassNotFoundException {
-        // Step 1: Establish a connection and create the PopulationReports and SpecificPopulationReports objects
-        Connection connection = new Connection();
-        connection.connect("localhost:33060", 30000);
+    public void testRunPopulationReports() throws SQLException {
+        // Reuse the established connection for PopulationReports and SpecificPopulationReports
         PopulationReports pr = new PopulationReports(connection.getConnection());
         SpecificPopulationReports cpr = new SpecificPopulationReports(connection.getConnection());
 
         // Step 2: Test displaying population level in continent, region, and country
-        pr.displayPopulationLevelInContinent();  // Assuming this function handles displaying logic and works without return values
+        pr.displayPopulationLevelInContinent();
         pr.displayPopulationLevelInRegion();
         pr.displayPopulationLevelInCountry();
 
@@ -193,8 +188,5 @@ public class AppIntegrationTest {
         assertNotNull(resultCity, "City population result should not be null.");
         assertFalse(resultCity.isEmpty(), "City population result should not be empty.");
         cpr.displayCityPopulation(resultCity);
-
-        // Step 9: Close the connection after testing
-        connection.disconnect();
     }
 }
