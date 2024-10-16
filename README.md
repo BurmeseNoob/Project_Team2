@@ -54,6 +54,3 @@
   <img src="https://img.shields.io/badge/Maven-%23C71A36.svg?style=for-the-badge&logo=apache-maven&logoColor=white"/>
 </p>
 
-<a href="https://codecov.io/github/BurmeseNoob/Project_Team2" > 
- <img src="https://codecov.io/github/BurmeseNoob/Project_Team2/graph/badge.svg?token=6FY83ZLKZS"/> 
- </a>
