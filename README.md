@@ -53,3 +53,4 @@
   <img src="https://img.shields.io/badge/Docker_Files-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Maven-%23C71A36.svg?style=for-the-badge&logo=apache-maven&logoColor=white"/>
 </p>
+[![codecov](https://codecov.io/github/BurmeseNoob/Project_Team2/graph/badge.svg?token=6FY83ZLKZS)](https://codecov.io/github/BurmeseNoob/Project_Team2)
