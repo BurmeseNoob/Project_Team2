@@ -145,5 +145,56 @@ public class AppIntegrationTest {
         // Step 9: Close the connection after testing
         connection.disconnect();
     }
+    @Test
+    public void testRunPopulationReports() throws SQLException, ClassNotFoundException {
+        // Step 1: Establish a connection and create the PopulationReports and SpecificPopulationReports objects
+        Connection connection = new Connection();
+        connection.connect("localhost:33060", 30000);
+        PopulationReports pr = new PopulationReports(connection.getConnection());
+        SpecificPopulationReports cpr = new SpecificPopulationReports(connection.getConnection());
 
+        // Step 2: Test displaying population level in continent, region, and country
+        pr.displayPopulationLevelInContinent();  // Assuming this function handles displaying logic and works without return values
+        pr.displayPopulationLevelInRegion();
+        pr.displayPopulationLevelInCountry();
+
+        // Step 3: Test world population data
+        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
+        assertNotNull(resultWorld, "World population result should not be null.");
+        assertFalse(resultWorld.isEmpty(), "World population result should not be empty.");
+        cpr.displayWorldPopulation(resultWorld);
+
+        // Step 4: Test population data by continent
+        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
+        assertNotNull(resultContinent, "Continent population result should not be null.");
+        assertFalse(resultContinent.isEmpty(), "Continent population result should not be empty.");
+        cpr.displayContinentPopulation(resultContinent);
+
+        // Step 5: Test population data by region
+        ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
+        assertNotNull(resultRegion, "Region population result should not be null.");
+        assertFalse(resultRegion.isEmpty(), "Region population result should not be empty.");
+        cpr.displayRegionPopulation(resultRegion);
+
+        // Step 6: Test population data by country
+        ArrayList<SpecificPopulation> resultCountry = cpr.getCountryPopulation();
+        assertNotNull(resultCountry, "Country population result should not be null.");
+        assertFalse(resultCountry.isEmpty(), "Country population result should not be empty.");
+        cpr.displayCountryPopulation(resultCountry);
+
+        // Step 7: Test population data by district
+        ArrayList<SpecificPopulation> resultDistrict = cpr.getDistrictPopulation();
+        assertNotNull(resultDistrict, "District population result should not be null.");
+        assertFalse(resultDistrict.isEmpty(), "District population result should not be empty.");
+        cpr.displayDistrictPopulation(resultDistrict);
+
+        // Step 8: Test population data by city
+        ArrayList<SpecificPopulation> resultCity = cpr.getCityPopulation();
+        assertNotNull(resultCity, "City population result should not be null.");
+        assertFalse(resultCity.isEmpty(), "City population result should not be empty.");
+        cpr.displayCityPopulation(resultCity);
+
+        // Step 9: Close the connection after testing
+        connection.disconnect();
+    }
 }
