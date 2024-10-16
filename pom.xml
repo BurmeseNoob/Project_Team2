@@ -53,6 +53,7 @@
             <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- Mockito SWAN HTET -->
 
         <!-- Mockito Inline -->
         <dependency>
@@ -104,28 +105,20 @@
                     </includes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.2</version>
+                <version>0.8.10</version> <!-- Ensure this is the latest -->
                 <executions>
                     <execution>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
         </plugins>
-
-
     </build>
 
 </project>
