@@ -54,6 +54,10 @@
   <img src="https://img.shields.io/badge/Maven-%23C71A36.svg?style=for-the-badge&logo=apache-maven&logoColor=white"/>
 </p>
 
-<a href="https://codecov.io/github/BurmeseNoob/Project_Team2" > 
- <img src="https://codecov.io/github/BurmeseNoob/Project_Team2/graph/badge.svg?token=6FY83ZLKZS"/> 
- </a>
+<a href="https://codecov.io/github/BurmeseNoob/Project_Team2?branch=master"> 
+ <img src="https://codecov.io/github/BurmeseNoob/Project_Team2/branch/master/graph/badge.svg?token=6FY83ZLKZS" alt="Code Coverage for Master" /> 
+</a>
+
+<a href="https://codecov.io/github/BurmeseNoob/Project_Team2?branch=develop"> 
+ <img src="https://codecov.io/github/BurmeseNoob/Project_Team2/branch/develop/graph/badge.svg?token=6FY83ZLKZS" alt="Code Coverage for Develop" /> 
+</a>
