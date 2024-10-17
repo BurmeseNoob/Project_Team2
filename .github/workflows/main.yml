@@ -44,10 +44,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Package and Run docker compose
+      - name: Package and Run Docker Compose
         run: |
-          mvn package -DskipTests
-          docker compose up --abort-on-container-exit
+          mvn package -DskipTests -X  
+          docker-compose up -d 
+          sleep 30 
+          docker-compose logs
+      - name: Stop and Remove Docker Containers
+        run: |
+          docker-compose down
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
