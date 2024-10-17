@@ -28,7 +28,7 @@
     </a>
 </p>
 
-<h2 align="center">📂 Key Features</h2>
+<h2 align="center">📂 System Key Features </h2>
 <ul>
   <li>🌍 Comprehensive Population Reports: Generate reports for countries, continents, and regions.</li>
   <li>🏙️ City and Capital Statistics: Access population data for cities and capital cities.</li>
@@ -43,7 +43,7 @@
   <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
   <li>Wai Yan Phone Myint - <strong>Code Assistant</strong></li>
   <li>Toe Aung Lynn - <strong>System Tester</strong></li>
-  <li>Saw Eh Blut Lel Bwe - <strong>Project Analyst</strong></li>
+  <li>Saw EhBlut Lel Bwe - <strong>Project Analyst</strong></li>
 </ul>
 
 <h2 align="center">🖥️ Project Languages</h2>
@@ -53,3 +53,4 @@
   <img src="https://img.shields.io/badge/Docker_Files-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Maven-%23C71A36.svg?style=for-the-badge&logo=apache-maven&logoColor=white"/>
 </p>
+
