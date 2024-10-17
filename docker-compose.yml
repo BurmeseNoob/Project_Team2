@@ -1,14 +1,50 @@
 version: '3'
+#services:
+#  # Application Dockerfile is in same folder which is .
+#  app:
+#    build: .
+#    command: ["java","ProjectTeam2.App"]
+#
+#
+#  # db is is db folder
+#  db:
+#    build: db/.
+#    restart: always
+#    ports:
+#      - "33061:3306"
+#
+#version: '3'
+
 services:
-  # Application Dockerfile is in same folder which is .
+  # Application service
   app:
     build: .
-    command: ["java","ProjectTeam2.App"]
+    command: ["java", "ProjectTeam2.App"]
+    depends_on:
+      - db  # Ensure the app waits for the database to be ready
+    environment:
+      DB_HOST: db  # The database service name
+      DB_PORT: 3306
+      DB_NAME: db  # Replace with your database name
+      DB_USER: user  # Replace with your MySQL user
+      DB_PASSWORD: password  # Replace with your MySQL password
+    networks:
+      - my_network
 
-
-  # db is is db folder
+  # Database service
   db:
-    build: db/.
+    build: db/.  # Ensure the Dockerfile for MySQL is in the db folder
     restart: always
     ports:
-      - "33061:3306"
+      - "33061:3306"  # Expose the database on port 33061 externally
+    environment:
+      MYSQL_ROOT_PASSWORD: password  # Set root password for MySQL
+      MYSQL_DATABASE: db  # Initialize the database
+      MYSQL_USER: user  # Set MySQL user
+      MYSQL_PASSWORD: password  # Set MySQL user password
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
