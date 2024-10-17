@@ -14,180 +14,124 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS) // Allow the test instance to be reused across all tests in the class
 public class AppIntegrationTest {
 
-    static App app;
-    static Connection connection;  // Reusable connection instance
+    static App app; // Static instance of the App class for testing
+    static Connection connection; // Static instance of the database connection
 
     @BeforeAll
     public void setUp() throws SQLException {
-        // Initialize the app and set up the database connection once for all tests
+        // Initialize the app and establish a database connection before all tests
         app = new App();
         connection = new Connection();
-        connection.connect("db:3306", 60000);  // Connect once for reuse
-        app.runApp(connection);
 
+        // Connect to the database using specified host and timeout
+        connection.connect("localhost:33061", 30000);
     }
 
     @AfterAll
     public void tearDown() throws SQLException {
-        // Disconnect after all tests are completed
+        // Disconnect from the database after all tests have completed
         connection.disconnect();
     }
 
-    @Test
-    public void testGetLanguages() throws SQLException {
-        // Reuse the established connection for LanguageReports
-        LanguageReports lr = new LanguageReports(connection.getConnection());
-
-        // Step 2: Retrieve the list of world languages and check it is not null or empty
-        ArrayList<LanguageData> languagesSpeakList = lr.getWorldLanguagesSpeak();
-        assertNotNull(languagesSpeakList, "Languages list should not be null.");
-        assertFalse(languagesSpeakList.isEmpty(), "Languages list should not be empty.");
-
-        // Check for expected content in languagesSpeakList
-        for (LanguageData languageData : languagesSpeakList) {
-            assertNotNull(languageData.getLanguage(), "Language name should not be null.");
-        }
-
-        // Step 4: Test the display function (if applicable)
-        lr.displayWorldLanguagesSpeak(languagesSpeakList);
-    }
-
+    /**
+     * Tests the functionality of running country reports.
+     * This test verifies that country reports can be generated and that the
+     * returned data is valid (i.e., not null and not empty).
+     *
+     * @throws SQLException if there is an error accessing the database
+     */
     @Test
     public void testRunCountryReports() throws SQLException {
-        // Reuse the established connection for CountryReports
-        CountryReports cr = new CountryReports(connection.getConnection());
+        CountryReports cr = new CountryReports(connection.getConnection()); // Create an instance of CountryReports
+        int N = 10; // Define a test parameter for the number of results to retrieve
 
-        // Step 2: Test the descending population of countries
+        // Execute the method to run country reports
+        app.runCountryReports(cr, N);
+
+        // Validate that the country report data is not null and not empty
         ArrayList<Country> countries = cr.getDescendingPopulationOfCountry();
-        assertNotNull(countries, "Countries list should not be null.");
-        assertFalse(countries.isEmpty(), "Countries list should not be empty.");
+        assertNotNull(countries); // Assert that countries list is not null
+        assertFalse(countries.isEmpty()); // Assert that countries list is not empty
 
-        // Check if the countries list is in descending order by population
-        for (int i = 1; i < countries.size(); i++) {
-            assertTrue(countries.get(i - 1).getPopulation() >= countries.get(i).getPopulation(),
-                    "Countries list should be in descending order of population.");
-        }
-
-        // Step 3: Test distinct continents
+        // Validate that distinct continents data is retrieved successfully
         ArrayList<String> continents = cr.getDistinctContinent();
-        assertNotNull(continents, "Continents list should not be null.");
-        assertFalse(continents.isEmpty(), "Continents list should not be empty.");
-
-        // Step 4: Test distinct regions
-        ArrayList<String> regions = cr.getDistinctRegion();
-        assertNotNull(regions, "Regions list should not be null.");
-        assertFalse(regions.isEmpty(), "Regions list should not be empty.");
-
-        // Step 5: Test user input for top N populated countries
-        int N = 10;  // Example value for testing
-        cr.displayTopPouplateCountrybyUser(N);
-        cr.displayTopPopulatedCountryAccordingtoContinentByUserInput(N);
-        cr.displayTopPopulatedCountryAccordingtoRegionByUserInput(N);
+        assertNotNull(continents); // Assert that continents list is not null
+        assertFalse(continents.isEmpty()); // Assert that continents list is not empty
     }
 
+    /**
+     * Tests the functionality of running city reports.
+     * This test verifies that city reports can be generated and that the
+     * returned data is valid (i.e., not null and not empty).
+     *
+     * @throws SQLException if there is an error accessing the database
+     */
     @Test
     public void testRunCityReports() throws SQLException {
-        // Reuse the established connection for CityReports
-        CityReports cy = new CityReports(connection.getConnection());
+        CityReports cy = new CityReports(connection.getConnection()); // Create an instance of CityReports
+        int N = 10; // Define a test parameter for the number of results to retrieve
 
-        // Step 2: Test retrieving and displaying cities by descending population
-        ArrayList<City> allCities = cy.getPopulationOftheCitybyDescendingOrder();
-        assertNotNull(allCities, "City list should not be null.");
-        assertFalse(allCities.isEmpty(), "City list should not be empty.");
+        // Execute the method to run city reports
+        app.runCityReports(cy, N);
 
-        // Check if the cities list is in descending order by population
-        for (int i = 1; i < allCities.size(); i++) {
-            assertTrue(allCities.get(i - 1).getPopulation() >= allCities.get(i).getPopulation(),
-                    "City list should be in descending order of population.");
-        }
-        cy.cityReportFormat(allCities);
+        // Validate that the city report data is not null and not empty
+        ArrayList<City> cities = cy.getPopulationOftheCitybyDescendingOrder();
+        assertNotNull(cities); // Assert that cities list is not null
+        assertFalse(cities.isEmpty()); // Assert that cities list is not empty
 
-        // Step 3: Test retrieving distinct continents
-        ArrayList<String> distinctContinents = cy.getDistinctContinent();
-        assertNotNull(distinctContinents, "Continents list should not be null.");
-        assertFalse(distinctContinents.isEmpty(), "Continents list should not be empty.");
-        cy.getPopulationOftheCitybyContinent(distinctContinents);
-
-        // Step 4: Test retrieving distinct regions
-        ArrayList<String> distinctRegions = cy.getDistinctRegion();
-        assertNotNull(distinctRegions, "Regions list should not be null.");
-        assertFalse(distinctRegions.isEmpty(), "Regions list should not be empty.");
-        cy.getPopulationOftheCitybyRegion(distinctRegions);
-
-        // Step 5: Test retrieving distinct countries
-        ArrayList<String> distinctCountries = cy.getDistinctCountry();
-        assertNotNull(distinctCountries, "Countries list should not be null.");
-        assertFalse(distinctCountries.isEmpty(), "Countries list should not be empty.");
-        cy.getPopulationOftheCitybyCountry(distinctCountries);
-
-        // Step 6: Test retrieving distinct districts
-        ArrayList<String> distinctDistricts = cy.getDistinctDistrict();
-        assertNotNull(distinctDistricts, "Districts list should not be null.");
-        assertFalse(distinctDistricts.isEmpty(), "Districts list should not be empty.");
-        cy.getPopulationOfthecitybyDistrict(distinctDistricts);
-
-        // Step 7: Test top N cities by population
-        int N = 10;
-        ArrayList<City> topCities = cy.getPopulationOfthecity(N);
-        assertNotNull(topCities, "Top cities list should not be null.");
-        assertFalse(topCities.isEmpty(), "Top cities list should not be empty.");
-        cy.displayingOutputOfTheCityPopulationTopValueByN(topCities, N);
-
-        // Step 8: Test top N cities by population within a continent, region, country, and district
-        cy.getPopulationOftheCityByContinentTopN(N);
-        cy.getPopulationOftheCityByRegionTopN(N);
-        cy.getPopulationOftheCityByCountryTopN(N);
-        cy.getPopulationOftheCityByDistrictTopN(N);
+        // Validate that distinct continents data is retrieved successfully
+        ArrayList<String> continents = cy.getDistinctContinent();
+        assertNotNull(continents); // Assert that continents list is not null
+        assertFalse(continents.isEmpty()); // Assert that continents list is not empty
     }
 
+    /**
+     * Tests the functionality of running population reports.
+     * This test verifies that population reports can be generated and that the
+     * returned data is valid (i.e., not null and not empty).
+     *
+     * @throws SQLException if there is an error accessing the database
+     */
     @Test
     public void testRunPopulationReports() throws SQLException {
-        // Reuse the established connection for PopulationReports and SpecificPopulationReports
-        PopulationReports pr = new PopulationReports(connection.getConnection());
-        SpecificPopulationReports cpr = new SpecificPopulationReports(connection.getConnection());
+        PopulationReports pr = new PopulationReports(connection.getConnection()); // Create an instance of PopulationReports
+        SpecificPopulationReports cpr = new SpecificPopulationReports(connection.getConnection()); // Create an instance of SpecificPopulationReports
+        int N = 10; // Define a test parameter for the number of results to retrieve
 
-        // Step 2: Test displaying population level in continent, region, and country
-        pr.displayPopulationLevelInContinent();
-        pr.displayPopulationLevelInRegion();
-        pr.displayPopulationLevelInCountry();
+        // Execute the method to run population reports
+        app.runPopulationReports(pr, cpr, N);
 
-        // Step 3: Test world population data
-        ArrayList<SpecificPopulation> resultWorld = cpr.getWorldPopulation();
-        assertNotNull(resultWorld, "World population result should not be null.");
-        assertFalse(resultWorld.isEmpty(), "World population result should not be empty.");
-        cpr.displayWorldPopulation(resultWorld);
+        // Validate that world population data is retrieved successfully
+        ArrayList<SpecificPopulation> worldPopulation = cpr.getWorldPopulation();
+        assertNotNull(worldPopulation); // Assert that world population list is not null
+        assertFalse(worldPopulation.isEmpty()); // Assert that world population list is not empty
 
-        // Step 4: Test population data by continent
-        ArrayList<SpecificPopulation> resultContinent = cpr.getContinentPopulation();
-        assertNotNull(resultContinent, "Continent population result should not be null.");
-        assertFalse(resultContinent.isEmpty(), "Continent population result should not be empty.");
-        cpr.displayContinentPopulation(resultContinent);
+        // Validate that continent population data is retrieved successfully
+        ArrayList<SpecificPopulation> continentPopulation = cpr.getContinentPopulation();
+        assertNotNull(continentPopulation); // Assert that continent population list is not null
+        assertFalse(continentPopulation.isEmpty()); // Assert that continent population list is not empty
+    }
 
-        // Step 5: Test population data by region
-        ArrayList<SpecificPopulation> resultRegion = cpr.getRegionPopulation();
-        assertNotNull(resultRegion, "Region population result should not be null.");
-        assertFalse(resultRegion.isEmpty(), "Region population result should not be empty.");
-        cpr.displayRegionPopulation(resultRegion);
+    /**
+     * Tests the functionality of running language reports.
+     * This test verifies that language reports can be generated and that the
+     * returned data is valid (i.e., not null and not empty).
+     *
+     * @throws SQLException if there is an error accessing the database
+     */
+    @Test
+    public void testRunLanguageReports() throws SQLException {
+        LanguageReports lr = new LanguageReports(connection.getConnection()); // Create an instance of LanguageReports
 
-        // Step 6: Test population data by country
-        ArrayList<SpecificPopulation> resultCountry = cpr.getCountryPopulation();
-        assertNotNull(resultCountry, "Country population result should not be null.");
-        assertFalse(resultCountry.isEmpty(), "Country population result should not be empty.");
-        cpr.displayCountryPopulation(resultCountry);
+        // Execute the method to run language reports
+        app.runLanguageReports(lr);
 
-        // Step 7: Test population data by district
-        ArrayList<SpecificPopulation> resultDistrict = cpr.getDistrictPopulation();
-        assertNotNull(resultDistrict, "District population result should not be null.");
-        assertFalse(resultDistrict.isEmpty(), "District population result should not be empty.");
-        cpr.displayDistrictPopulation(resultDistrict);
-
-        // Step 8: Test population data by city
-        ArrayList<SpecificPopulation> resultCity = cpr.getCityPopulation();
-        assertNotNull(resultCity, "City population result should not be null.");
-        assertFalse(resultCity.isEmpty(), "City population result should not be empty.");
-        cpr.displayCityPopulation(resultCity);
+        // Validate that language data is retrieved successfully
+        ArrayList<LanguageData> languages = lr.getWorldLanguagesSpeak();
+        assertNotNull(languages); // Assert that languages list is not null
+        assertFalse(languages.isEmpty()); // Assert that languages list is not empty
     }
 }

@@ -15,9 +15,10 @@
             Connection ct = new Connection();
 
             if(args.length < 1){
-                ct.connect("db:3306", 60000);
+                ct.connect("localhost:33061", 60000);
             }else{
-                ct.connect(args[0], Integer.parseInt(args[1]));
+//                ct.connect(args[0], Integer.parseInt(args[1]));
+                ct.connect("db:3306", 60000);
             }
             //Run the application containing querying methods
             app.runApp(ct);
