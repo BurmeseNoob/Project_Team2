@@ -36,10 +36,6 @@ jobs:
   build:
     name: Build and Start Using Docker Compose
     runs-on: ubuntu-20.04
-    services:
-      docker:
-        image: docker:20.10.7
-        options: --privileged
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -50,6 +46,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: Install Docker Compose
+        run: |
+          sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+          sudo chmod +x /usr/local/bin/docker-compose
       - name: Package and Run Docker Compose
         run: |
           mvn package -DskipTests
