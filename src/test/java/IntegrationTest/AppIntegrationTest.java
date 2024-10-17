@@ -26,7 +26,7 @@ public class AppIntegrationTest {
         app = new App();
         app.runApp();
         connection = new Connection();
-        connection.connect("localhost:33060", 30000);  // Connect once for reuse
+        connection.connect("localhost:33061", 30000);  // Connect once for reuse
     }
 
     @AfterAll
