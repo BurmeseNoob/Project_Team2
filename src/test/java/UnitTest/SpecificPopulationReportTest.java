@@ -19,10 +19,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class SpecificPopulationReportTest {
+    // Declare an instance of SpecificPopulationReports to manage specific population reports
     private SpecificPopulationReports spr;
+
+    // Declare a mock Connection object for simulating database connections in tests
     private Connection mockConnection;
+
+    // Declare a mock Statement object for executing SQL queries in tests
     private Statement mockStatement;
+
+    // Declare a mock ResultSet object for handling results returned by SQL queries in tests
     private ResultSet mockResultSet;
+
 
     //Initiate  the necessary object
     @BeforeEach
