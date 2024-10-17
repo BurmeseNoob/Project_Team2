@@ -1,5 +1,7 @@
 name: Java Querying  App
 on: push
+permissions:
+  contents: write
 jobs:
   UnitTests:
     name: Unit Tests
