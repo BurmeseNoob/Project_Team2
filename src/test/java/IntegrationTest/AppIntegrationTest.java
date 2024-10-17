@@ -25,7 +25,7 @@ public class AppIntegrationTest {
         // Initialize the app and set up the database connection once for all tests
         app = new App();
         connection = new Connection();
-        connection.connect("db:3306", 30000);  // Connect once for reuse
+        connection.connect("db:3306", 60000);  // Connect once for reuse
         app.runApp(connection);
 
     }
