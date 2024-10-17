@@ -24,9 +24,10 @@ public class AppIntegrationTest {
     public void setUp() throws SQLException {
         // Initialize the app and set up the database connection once for all tests
         app = new App();
-        app.runApp();
         connection = new Connection();
-        connection.connect("localhost:33061", 30000);  // Connect once for reuse
+        connection.connect("db:3306", 30000);  // Connect once for reuse
+        app.runApp(connection);
+
     }
 
     @AfterAll
