@@ -16,23 +16,16 @@
 version: '3.3'
 
 services:
-  db:
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_DATABASE: world
-    ports:
-      - "33061:3306"
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-
   app:
     build: .
-    depends_on:
-      db:
-        condition: service_healthy
     ports:
       - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - "33061:3306"
