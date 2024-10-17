@@ -1,28 +1,27 @@
 ### *Issue Description*
 
-* *Database connection keeps disconnecting unexpectedly.*
+* *Merge conflict occurred when attempting to integrate a feature branch into the main branch, preventing the completion of the merge process.*
 
 
 ### *Steps to Reproduce the Issue*
 
-1. *Verify the current database port number.*
-2. *Adjust to the correct port number if needed.*
+1. *Create a new feature branch from the main branch.*
+2. *Make changes to the same file i both the main branch and the feature branch.*
+3. *Attempt to merge the feature branch back into the main branch.*
+4. *Observe the merge conflict error messages.*
 
 
 ### *Expected Result*
 
-* *The database server should connect successfully.*
+* *The feature branch should merge into the main branch without conflicts, allowing for smooth integration of changes.*
 
 
 ### *Actual Result*
 
-* *Successfully connects to SQL.*
+* *The merge process fails, displaying conflict messages and requiring manual resolution of the conflicting changes.*
 
 
 ###  *Additional Details / Screenshot*
 
-* *While running the Docker Compose, the SQL connection disconnects intermittently.*
-* *First, we reviewed the code and rechecked the SQL port number.*
-* *Initially, we overlooked a missing digit in the SQL port number.*
-* *This oversight led to spending an entire evening troubleshooting.*
-* *After several checks, we discovered a missing zero in the port number.*
+* *To minimize future merge conflicts, it is advisable for team members to communicate and coordinate changes, especially when working on the same files.*
+* *Regularly pulling the latest changes from the main branch into feature branches can also help to identify and ressolve potential conflicts earlier in the development process.*
