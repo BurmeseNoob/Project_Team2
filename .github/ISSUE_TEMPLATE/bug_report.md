@@ -10,7 +10,7 @@ assignees: ''
 ## Issue Description
 * *[Brief issue summary.]*
 ## Email Address
-* *[youremailaddress]*
+* *[your email address]*
 "## Steps to Reproduce
 1. *[Step 1]*
 2. *[Step 2]*
@@ -19,7 +19,7 @@ assignees: ''
 * *[What should happen.]*
 ## Actual Result
 * *[What actually happened.]*
-##Browser
+## Browser
 1. *[Chrome]*
 2. *[Edge]*
 3. *[Safari]*
