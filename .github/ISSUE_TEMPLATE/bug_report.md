@@ -11,7 +11,7 @@ assignees: ''
 * *[Brief issue summary.]*
 ## Email Address
 * *[your email address]*
-"## Steps to Reproduce
+## Steps to Reproduce
 1. *[Step 1]*
 2. *[Step 2]*
 3. *[Step 3]*
