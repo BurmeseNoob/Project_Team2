@@ -10,7 +10,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-
   - type: input
     id: contact
     attributes:
@@ -19,60 +18,15 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-
   - type: textarea
-    id: issue-description
+    id: what-happened
     attributes:
-      label: Issue Description
-      description: Provide a brief summary of the issue.
-      placeholder: Brief issue summary.
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ## Steps to Reproduce
-
-  - type: textarea
-    id: steps-to-reproduce
-    attributes:
-      label: Steps to Reproduce
-      description: List the steps to reproduce the issue.
-      placeholder: |
-        1. Step 1
-        2. Step 2
-        3. Step 3
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected-result
-    attributes:
-      label: Expected Result
-      description: What did you expect to happen?
-      placeholder: What should happen.
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual-result
-    attributes:
-      label: Actual Result
-      description: What actually happened?
-      placeholder: What actually happened.
-    validations:
-      required: true
-
-  - type: textarea
-    id: additional-details
-    attributes:
-      label: Additional Details
-      description: Any additional details, notes, or screenshots.
-      placeholder: Optional: Notes or screenshots.
-    validations:
-      required: false
-
   - type: dropdown
     id: version
     attributes:
@@ -84,7 +38,6 @@ body:
       default: 0
     validations:
       required: true
-
   - type: dropdown
     id: browsers
     attributes:
@@ -95,14 +48,12 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
-
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code.
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-
   - type: checkboxes
     id: terms
     attributes:
