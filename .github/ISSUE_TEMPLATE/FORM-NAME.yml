@@ -10,6 +10,13 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      placeholder: Describe the issue!
+    validations:
+      required: true
   - type: input
     id: contact
     attributes:
@@ -19,23 +26,28 @@ body:
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: steps-to-reproduce
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
+      label: Steps to Reproduce
+      description: Also tell us, step by step?
       placeholder: Tell us what you see!
       value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: expected-result
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
+      label: Expected Result
+      description: What do u expect to happen or occur??
+      placeholder: Expected Result
+    validations:
+      required: true
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual Result
+      description: What is the actual result??
+      placeholder: The result what you saw
     validations:
       required: true
   - type: dropdown
@@ -49,16 +61,7 @@ body:
         - Safari
         - Microsoft Edge
   - type: textarea
-    id: logs
+    id: additional-details
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Additional Details
+      placeholder: Write additional details!
