@@ -146,9 +146,9 @@ public class CountryReports {
     }
     public void displayingAboutDescendingPopulationByContinent()
     {
-        //Arraylist of getting Distinct Continent
+        // Arraylist of getting Distinct Continent
         ArrayList<String> continents = getDistinctContinent();
-        //Iterating the Cotinent arraylist and querying specific population
+        // Iterating the Cotinent arraylist and querying specific population
         for(String continent: continents)
         {
             System.out.println("");
@@ -248,7 +248,7 @@ public class CountryReports {
     }
 
     //#########################################################################
-    //#4 (populated countries in the world according to top values give by user)
+    //#4 (Populated countries in the world according to top values give by user)
     public ArrayList<Country> getTopPopulatedCountry(int N)
     {
         ArrayList<Country> countryList = new ArrayList<>();
@@ -260,10 +260,10 @@ public class CountryReports {
             PreparedStatement  pstmt = con.prepareStatement(command);
             pstmt.setInt(1,N);
 
-            //execute
+            // execute
             ResultSet rset = pstmt.executeQuery();
 
-            //iterating and addto arraylist
+            // iterating and addto arraylist
             while (rset.next()) {
                 Country ct = new Country(
                         rset.getString("Code"),
@@ -283,7 +283,7 @@ public class CountryReports {
 
     public void displayTopPouplateCountrybyUser(int N)
     {
-        // get the country list
+        // get the countries list
         ArrayList<Country> countries = getTopPopulatedCountry(N);
 
         System.out.println("");
