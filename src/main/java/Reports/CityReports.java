@@ -24,10 +24,10 @@ public class CityReports {
             return;
         }
         // Table Header Format
-        System.out.println("+----------------------+-----------------------------------+-------------------------+--------+");
-        System.out.printf("| %-25s | %-30s | %-20s | %-18s |%n",
+        System.out.println("+-----------------------------------+------------------------------------+----------------------+--------------------+");
+        System.out.printf("| %-33s | %-34s | %-20s | %-18s |%n",
                 "City Name", "Country", "District", "Population");
-        System.out.println("+----------------------+-----------------------------------+-------------------------+--------+");
+        System.out.println("+-----------------------------------+------------------------------------+----------------------+--------------------+");
         for (City city : citiesList) {
             if(city == null)
             {
@@ -44,7 +44,7 @@ public class CityReports {
                 ResultSet rset = stmt.executeQuery(query);
                 if (rset.next()) {
                     String countryName = rset.getString("Name");
-                    System.out.printf("| %-25s | %-30s | %-20s | %,18d |%n",
+                    System.out.printf("| %-33s | %-34s | %-20s | %,18d |%n",
                             city.getName(), countryName, city.getDistrict(), city.getPopulation());
 
                 }
@@ -53,7 +53,7 @@ public class CityReports {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("+----------------------+-----------------------------------+-------------------------+--------+");
+        System.out.println("+-----------------------------------+------------------------------------+----------------------+--------------------+");
 
     }
 
@@ -67,10 +67,10 @@ public class CityReports {
         }
 
         // Table Header Format
-        System.out.println("+----------------------+-----------------------------------+--------+");
+        System.out.println("+----------------------+-----------------------------------+-------------------------+");
         System.out.printf("| %-25s | %-30s | %-18s |%n",
                 "City Name", "Country", "Population");
-        System.out.println("+----------------------+-----------------------------------+--------+");
+        System.out.println("+----------------------+-----------------------------------+-------------------------+");
 
         for (City city : citiesList) {
             if(city == null)
@@ -96,7 +96,7 @@ public class CityReports {
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("+----------------------+-----------------------------------+-------------------------+--------+");
+        System.out.println("+----------------------+-----------------------------------+-------------------------+");
     }
 
     //#7 (Cities in the world organised by largest population to smallest.)
