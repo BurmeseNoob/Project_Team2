@@ -7,7 +7,7 @@
 <h3 align="center">🗓️ Project Timeline ( September 23, 2024 - October 21, 2024 )</h3>
 
 <p align="center">
-    This project is part of the SET09623 DevOps_module, focused on creating a system that provides detailed population reports for an organization. The project follows Scrum methodologies, utilizes an SQL database for data management, and integrates continuous testing and deployment through GitHub Actions.
+    This project is part of the SET09623 DevOps module, focused on creating a system that provides detailed population reports for an organization. The project follows Scrum methodologies, utilizes an SQL database for data management, and integrates continuous testing and deployment through GitHub Actions.
 </p>
 
 <p align="center">
@@ -37,7 +37,7 @@
   <li>⚙️ Continuous Integration: Integrated with GitHub Actions for testing and deployment.</li>
 </ul>
 
-<h2 align="center">👨‍💻 Team Members</h2>
+<h2 align="center">👨‍💻 Our Group "2" Team Members</h2>
 <ul style="list-style-type: none; padding: 0;">
   <li>Aung Ye Khant - <strong>Project Leader</strong></li>
   <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
