@@ -28,7 +28,7 @@
     </a>
 </p>
 
-<h2 align="center">📂 System Key Features</h2>
+<h2 align="center">📂 System Features</h2>
 <ul>
   <li>🌍 Comprehensive Population Reports: Generate reports for countries, continents, and regions.</li>
   <li>🏙️ City and Capital Statistics: Access population data for cities and capital cities.</li>
