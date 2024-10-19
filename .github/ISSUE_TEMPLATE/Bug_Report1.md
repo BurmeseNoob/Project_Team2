@@ -1,4 +1,4 @@
-### *Issue Description*
+### *Issue Description*  
 
 * *Database connection keeps disconnecting unexpectedly.*
 
