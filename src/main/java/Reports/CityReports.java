@@ -79,7 +79,7 @@ public class CityReports {
         }
     }
 
-    //#8 (the cities in a continent organised by largest population to smallest)
+    //#8 (cities in a continent organised by largest population to smallest)
     public ArrayList<String> getDistinctContinent()
     {
         // get the ditinctContinent to iterate for population
@@ -101,7 +101,7 @@ public class CityReports {
     }
 
     public void getPopulationOftheCitybyContinent() throws SQLException {
-        //1 country codd 2 join 3 continent
+        // 1 country codd 2 join 3 continent
 
        try
        {
@@ -156,7 +156,7 @@ public class CityReports {
        }
     }
 
-    //#9 (the cities in a region organised by largest population to smallest)
+    //#9 (cities in a region organised by largest population to smallest)
     public ArrayList<String> getDistinctRegion() throws SQLException
     {
         // get the ditinctRegion to iterate for population
@@ -178,7 +178,7 @@ public class CityReports {
     }
 
     public void getPopulationOftheCitybyRegion() throws SQLException {
-        //1 country codd 2 join 3 region
+        // 1 country codd 2 join 3 region
         try
         {
             Statement stmt = con.createStatement();
@@ -232,7 +232,7 @@ public class CityReports {
         }
     }
 
-    //#10 (the cities in a Country organised by largest population to smallest)
+    //#10 (cities in a Country organised by largest population to smallest)
     public ArrayList<String> getDistinctCountry()
     {
         ArrayList<String> countryList = new ArrayList<>();
