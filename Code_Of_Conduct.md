@@ -1,4 +1,4 @@
-                                 Code of Conduct of Group 2 
+                                 Our Group "2" Team's Code of Conduct 
 
 ## 1. Professionalism
 - Conduct yourself professionally in all interactions.
