@@ -37,13 +37,13 @@
   <li>⚙️ Continuous Integration: Integrated with GitHub Actions for testing and deployment.</li>
 </ul>
 
-<h2 align="center">👨‍💻 Team Members</h2>
+<h2 align="center">👨‍💻 Our Group "2" Team Members</h2>
 <ul style="list-style-type: none; padding: 0;">
   <li>Aung Ye Khant - <strong>Project Leader</strong></li>
   <li>Swan Htet Pyae Sone - <strong>Main Developer</strong></li>
   <li>Wai Yan Phone Myint - <strong>Code Assistant</strong></li>
   <li>Toe Aung Lynn - <strong>System Tester</strong></li>
-  <li>Saw EhBlut Lel Bwe - <strong>Project Analyst</strong></li>
+  <li>Saw Eh Blut Lel Bwe - <strong>Project Analyst</strong></li>
 </ul>
 
 <h2 align="center">🖥️ Project Languages</h2>
