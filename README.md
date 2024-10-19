@@ -46,7 +46,7 @@
   <li>Saw Eh Blut Lel Bwe - <strong>Project Analyst</strong></li>
 </ul>
 
-<h2 align="center">🖥️ Project Languages</h2>
+<h2 align="center">🖥️ Project_Languages</h2>
 <p align="center">
   <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
